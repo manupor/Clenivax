@@ -1,0 +1,166 @@
+/*
+ * Clenivax — MaxiHealth color & logo overrides
+ * Primary teal  : #00a8cc
+ * Mid teal      : #1a7d9e
+ * Dark teal     : #1a6b88
+ * Dark navy     : #1a2744
+ */
+
+/* ── Logo text in header ─────────────────────── */
+.clnvx-logo {
+    font-family: 'Raleway', sans-serif;
+    font-size: 28px;
+    font-weight: 900;
+    color: #1a2744;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+.clnvx-logo-ftr {
+    font-size: 22px;
+    color: #fff !important;
+    display: block;
+    margin-bottom: 20px;
+}
+.clnvx-plus {
+    color: #00a8cc;
+    font-size: 1.2em;
+    margin-right: 3px;
+}
+.middle-header .logo-block a { text-decoration: none; }
+
+/* ── Top-header CTA button ───────────────────── */
+.top-header .col-md-6:last-child > a,
+.top-header .col-md-6:last-child > a:focus {
+    background-color: #00a8cc;
+}
+.top-header .col-md-6:last-child > a:hover {
+    background-color: #1a2744;
+}
+
+/* ── Navigation bar ──────────────────────────── */
+.ow-navigation {
+    background-color: #1a2744;
+    border-color: #1a2744;
+}
+.ow-navigation .navbar-nav > .active > a,
+.ow-navigation .navbar-nav > .active > a:hover,
+.ow-navigation .navbar-nav > .active > a:focus,
+.ow-navigation .navbar-nav > li > a:hover,
+.ow-navigation .navbar-nav > li > a:focus {
+    background-color: #00a8cc;
+    color: #fff;
+}
+
+/* ── Hero banner CTA button ──────────────────── */
+.banner-left a {
+    background-color: #00a8cc;
+    border-color: #00a8cc;
+}
+.banner-left a:hover {
+    background-color: #1a2744;
+    border-color: #1a2744;
+}
+
+/* ── Message board (feature boxes) ──────────── */
+.message-borad { background-color: #f9f9f9; }
+.emargency-case { background-color: #1a2744; }
+.opening-hours  { background-color: #00a8cc; }
+.message-block a { color: #fff; }
+.message-block a:hover { color: #d0f0fa; }
+
+/* ── Section headers underline color ─────────── */
+.section-header h3:before,
+.section-header h3:after {
+    background-color: #00a8cc;
+}
+
+/* ── Service block icon hover ─────────────────── */
+.service-block:hover .service-block-icon {
+    background-color: #00a8cc;
+}
+
+/* ── Appointment form button ─────────────────── */
+.appoinment-form .btn-submit {
+    background-color: #00a8cc;
+    border-color: #00a8cc;
+}
+.appoinment-form .btn-submit:hover {
+    background-color: #1a2744;
+    border-color: #1a2744;
+}
+.appoinment-form h3 { color: #1a2744; }
+
+/* ── Call-out CTA banner ─────────────────────── */
+.call-out { background-color: #1a2744; }
+.call-out-content span { color: #00a8cc; }
+.call-out-content a {
+    background-color: #00a8cc;
+    color: #fff;
+}
+.call-out-content a:hover {
+    background-color: #fff;
+    color: #1a2744;
+}
+
+/* ── What We Do Best (products) ──────────────── */
+.what-we-do-block:hover .what-we-do-block-content {
+    background-color: rgba(0,168,204,0.85);
+}
+
+/* ── We Are Best section ─────────────────────── */
+.we-are-best { background-color: #f5f7fa; }
+.we-are-best-block { border-left: 3px solid #00a8cc; }
+
+/* ── Accordion panel ─────────────────────────── */
+.departments .panel-heading a { color: #1a2744; }
+.departments .panel-heading a:hover { color: #00a8cc; }
+.departments .panel-body a { color: #00a8cc; }
+
+/* ── Counter section ─────────────────────────── */
+.happy-customer > a {
+    background-color: #00a8cc;
+    border-color: #00a8cc;
+}
+.happy-customer > a:hover {
+    background-color: #1a2744;
+    border-color: #1a2744;
+}
+
+/* ── Footer contact-details bar ──────────────── */
+.contact-details:before,
+.contact-details:after {
+    border-bottom-color: #1a2744;
+}
+.contact-details .detail-box               { background-color: #00a8cc; }
+.contact-details .detail-box i             { background-color: #1a7d9e; }
+.contact-details .detail-box.phone-box     { background-color: #1a7d9e; }
+.contact-details .detail-box.phone-box i   { background-color: #1a6b88; }
+.contact-details .detail-box.mail-box      { background-color: #1a6b88; }
+.contact-details .detail-box.mail-box i    { background-color: #155a75; }
+
+/* ── Footer widget title underline ───────────── */
+.footer-main .widget-title:before { background-color: #00a8cc; }
+
+/* ── Footer newsletter send button ───────────── */
+.footer-main .widget-newsletter .input-group span button {
+    background-color: #00a8cc;
+}
+
+/* ── Bottom footer bar ───────────────────────── */
+.bottom-footer { background-color: #111416; }
+
+/* ── Banner shape colors ─────────────────────── */
+.home-banner .left-shape       { background-color: #00a8cc; }
+.home-banner .left-shape-blue  { background-color: #1a2744; }
+.home-banner .right-shape-blue { background-color: #1a7d9e; }
+
+/* ── Service block icon bg ───────────────────── */
+.service-block-icon { background-color: #1a2744; }
+
+/* ── We-are-best icon bg ─────────────────────── */
+.we-are-best-icon { background-color: #00a8cc; }
+
+/* ── Panel accordion active color ───────────── */
+.panel-heading a:hover,
+.panel-title a:hover { color: #00a8cc !important; }
+.panel-collapse .panel-body a { color: #00a8cc; }
