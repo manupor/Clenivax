@@ -742,6 +742,130 @@
 /* ════════════════════════════════════════════════
    MEDICOSWAB STYLE PRODUCTS PAGE WITH SIDEBAR
    ════════════════════════════════════════════════ */
+.products-catalog-page {
+    padding: 40px 0 80px;
+    background: #fff;
+    position: relative;
+    z-index: 10;
+}
+/* Remove any banner shapes from products page */
+.products-catalog-page .banner-shape,
+.products-catalog-page .left-shape,
+.products-catalog-page .left-shape-blue,
+.products-catalog-page .right-shape,
+.products-catalog-page .right-shape-blue,
+.products-catalog-page [class*="shape"] {
+    display: none !important;
+}
+
+/* Page Header */
+.page-header-section {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e8e8e8;
+}
+.page-header-section h1 {
+    font-size: 32px;
+    color: #0a1f44;
+    margin: 0 0 10px;
+    font-weight: 700;
+}
+.breadcrumb-nav {
+    color: #888;
+    font-size: 14px;
+    margin: 0;
+}
+.breadcrumb-nav a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+/* Clean Sidebar */
+.sidebar-column {
+    padding-right: 20px;
+}
+.category-sidebar {
+    background: #fafafa;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    padding: 0;
+    overflow: hidden;
+}
+.sidebar-section-title {
+    background: #0a1f44;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0;
+    padding: 15px 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.sidebar-category-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.cat-parent {
+    border-bottom: 1px solid #e5e5e5;
+}
+.cat-parent:last-child {
+    border-bottom: none;
+}
+.cat-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    color: #444;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    background: #fff;
+}
+.cat-link:hover {
+    background: #f0f4f8;
+    color: #0a1f44;
+}
+.cat-link.has-sub i {
+    font-size: 11px;
+    color: #999;
+    transition: transform 0.2s ease;
+}
+.cat-link[aria-expanded="true"] i {
+    transform: rotate(90deg);
+}
+.cat-parent.active > .cat-link {
+    background: #e8f4fc;
+    color: #0a1f44;
+    font-weight: 600;
+    border-left: 3px solid #2563eb;
+}
+.sub-cat {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: #f5f5f5;
+}
+.sub-cat li a {
+    display: block;
+    padding: 10px 20px 10px 35px;
+    color: #666;
+    font-size: 13px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+}
+.sub-cat li a:hover {
+    background: #e8f4fc;
+    color: #2563eb;
+}
+.sub-cat li.active-sub a {
+    background: #e8f4fc;
+    color: #2563eb;
+    border-left-color: #2563eb;
+    font-weight: 600;
+}
 .medicoswab-products {
     padding: 40px 0 80px;
     background: #fff;

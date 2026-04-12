@@ -88,28 +88,28 @@
         </nav>
     </header>
 
-    <!-- PRODUCTS PAGE -->
-    <div class="medicoswab-products-page">
+    <!-- PRODUCTS PAGE - CLEAN LAYOUT -->
+    <div class="products-catalog-page">
         <div class="container">
             <!-- Page Title -->
             <div class="row">
                 <div class="col-md-12">
-                    <div class="page-title-bar">
+                    <div class="page-header-section">
                         <h1>Products</h1>
-                        <p class="breadcrumb"><a href="index.html">Home</a> &gt; Products</p>
+                        <p class="breadcrumb-nav"><a href="index.html">Home</a> &gt; Products</p>
                     </div>
                 </div>
             </div>
 
             <div class="row">
                 <!-- Left Sidebar - Product Categories -->
-                <div class="col-md-3 col-sm-4 product-sidebar-left">
-                    <div class="sidebar-panel">
-                        <h3 class="sidebar-heading">Product Categories</h3>
-                        <ul class="category-tree">
-                            <li class="category-item has-children">
-                                <a href="#" class="cat-toggle">Specimen Collection Swab <i class="fa fa-angle-right"></i></a>
-                                <ul class="subcategory">
+                <div class="col-md-3 col-sm-4 sidebar-column">
+                    <div class="category-sidebar">
+                        <h3 class="sidebar-section-title">Product Categories</h3>
+                        <ul class="sidebar-category-list">
+                            <li class="cat-parent">
+                                <a class="cat-link has-sub" data-toggle="collapse" href="#cat-swabs">Specimen Collection Swab <i class="fa fa-chevron-right"></i></a>
+                                <ul class="sub-cat collapse" id="cat-swabs">
                                     <li><a href="#">Nasopharyngeal Swabs</a></li>
                                     <li><a href="#">Oropharyngeal Swabs</a></li>
                                     <li><a href="#">Gynecological Swabs</a></li>
@@ -117,60 +117,60 @@
                                     <li><a href="#">Medical Cleaning Swabs</a></li>
                                 </ul>
                             </li>
-                            <li class="category-item">
-                                <a href="#">Cleanroom Swabs</a>
+                            <li class="cat-parent">
+                                <a class="cat-link" href="#">Cleanroom Swabs</a>
                             </li>
-                            <li class="category-item has-children active">
-                                <a href="#" class="cat-toggle open">CHG Swab &amp; Applicator <i class="fa fa-angle-down"></i></a>
-                                <ul class="subcategory show">
+                            <li class="cat-parent active">
+                                <a class="cat-link has-sub" data-toggle="collapse" href="#cat-chg">CHG Swab &amp; Applicator <i class="fa fa-chevron-down"></i></a>
+                                <ul class="sub-cat collapse in" id="cat-chg">
                                     <li><a href="#">CHG Swabs</a></li>
-                                    <li class="current"><a href="#">CHG Applicators</a></li>
+                                    <li class="active-sub"><a href="#">CHG Applicators</a></li>
                                 </ul>
                             </li>
-                            <li class="category-item">
-                                <a href="#">Sampling Kit</a>
+                            <li class="cat-parent">
+                                <a class="cat-link" href="#">Sampling Kit</a>
                             </li>
-                            <li class="category-item">
-                                <a href="#">VTM Kit</a>
+                            <li class="cat-parent">
+                                <a class="cat-link" href="#">VTM Kit</a>
                             </li>
-                            <li class="category-item has-children">
-                                <a href="#" class="cat-toggle">Saliva Collection Kit <i class="fa fa-angle-right"></i></a>
-                                <ul class="subcategory">
+                            <li class="cat-parent">
+                                <a class="cat-link has-sub" data-toggle="collapse" href="#cat-saliva">Saliva Collection Kit <i class="fa fa-chevron-right"></i></a>
+                                <ul class="sub-cat collapse" id="cat-saliva">
                                     <li><a href="#">DNA Collection Kit</a></li>
                                     <li><a href="#">RNA Collection Kit</a></li>
                                 </ul>
                             </li>
-                            <li class="category-item">
-                                <a href="#">Cervical Cytology Brush</a>
+                            <li class="cat-parent">
+                                <a class="cat-link" href="#">Cervical Cytology Brush</a>
                             </li>
-                            <li class="category-item has-children">
-                                <a href="#" class="cat-toggle">Vacuum Blood Collection Tube <i class="fa fa-angle-right"></i></a>
-                                <ul class="subcategory">
+                            <li class="cat-parent">
+                                <a class="cat-link has-sub" data-toggle="collapse" href="#cat-blood">Vacuum Blood Collection Tube <i class="fa fa-chevron-right"></i></a>
+                                <ul class="sub-cat collapse" id="cat-blood">
                                     <li><a href="#">Plasma Blood Collection Tube</a></li>
                                     <li><a href="#">Whole Blood Collection Tube</a></li>
                                     <li><a href="#">Serum Blood Collection Tube</a></li>
                                 </ul>
                             </li>
-                            <li class="category-item has-children">
-                                <a href="#" class="cat-toggle">Transport Medium <i class="fa fa-angle-right"></i></a>
-                                <ul class="subcategory">
+                            <li class="cat-parent">
+                                <a class="cat-link has-sub" data-toggle="collapse" href="#cat-transport">Transport Medium <i class="fa fa-chevron-right"></i></a>
+                                <ul class="sub-cat collapse" id="cat-transport">
                                     <li><a href="#">Transport Swab</a></li>
                                     <li><a href="#">Virus Transport Medium</a></li>
                                     <li><a href="#">Cell Preservation Solution</a></li>
                                     <li><a href="#">Normal Saline</a></li>
                                 </ul>
                             </li>
-                            <li class="category-item">
-                                <a href="#">Sample Storage Containers</a>
+                            <li class="cat-parent">
+                                <a class="cat-link" href="#">Sample Storage Containers</a>
                             </li>
-                            <li class="category-item">
-                                <a href="#">Alcohol Wipes</a>
+                            <li class="cat-parent">
+                                <a class="cat-link" href="#">Alcohol Wipes</a>
                             </li>
-                            <li class="category-item">
-                                <a href="#">Face Mask</a>
+                            <li class="cat-parent">
+                                <a class="cat-link" href="#">Face Mask</a>
                             </li>
-                            <li class="category-item">
-                                <a href="#">Featured Products</a>
+                            <li class="cat-parent">
+                                <a class="cat-link" href="#">Featured Products</a>
                             </li>
                         </ul>
                     </div>
