@@ -1,17 +1,75 @@
 /*
- * Clenivax — MaxiHealth color & logo overrides
- * Primary teal  : #00a8cc
- * Mid teal      : #1a7d9e
- * Dark teal     : #1a6b88
- * Dark navy     : #1a2744
+ * Clenivax — Navy Blue Palette
+ * Deep navy     : #0a1f44
+ * Mid navy      : #142d6e
+ * Accent blue   : #1e5fa8
+ * Highlight     : #2563eb
+ * Light bg      : #f4f7fc
  */
 
-/* ── Logo text in header ─────────────────────── */
+/* ════════════════════════════════════════════════
+   HERO VIDEO BACKGROUND
+   ════════════════════════════════════════════════ */
+.home-banner {
+    background: none !important;
+    overflow: hidden;
+    position: relative;
+}
+.home-banner::before {
+    background: linear-gradient(135deg, rgba(10,31,68,0.90) 0%, rgba(20,45,110,0.80) 60%, rgba(30,95,168,0.65) 100%) !important;
+    opacity: 1 !important;
+    z-index: 1;
+}
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    z-index: 0;
+}
+.home-banner .container,
+.home-banner .banner-shape {
+    position: relative;
+    z-index: 2;
+}
+/* Text in hero → always white */
+.banner-left span,
+.banner-left h3,
+.banner-left p { color: #fff !important; }
+.banner-left span {
+    background-color: rgba(37,99,235,0.75);
+    border-radius: 3px;
+    padding: 3px 10px;
+}
+/* Hero CTA button */
+.banner-left a {
+    background-color: #2563eb !important;
+    border-color: #2563eb !important;
+    color: #fff !important;
+}
+.banner-left a:hover {
+    background-color: #0a1f44 !important;
+    border-color: #0a1f44 !important;
+}
+/* Banner shapes — navy tones */
+.home-banner .left-shape       { background-color: #2563eb; }
+.home-banner .left-shape-blue  { background-color: #0a1f44; }
+.home-banner .right-shape      { background-color: #f4f7fc; }
+.home-banner .right-shape-blue { background-color: #142d6e; }
+
+/* ════════════════════════════════════════════════
+   LOGO
+   ════════════════════════════════════════════════ */
 .clnvx-logo {
     font-family: 'Raleway', sans-serif;
     font-size: 28px;
     font-weight: 900;
-    color: #1a2744;
+    color: #0a1f44;
     letter-spacing: 1px;
     text-decoration: none;
 }
@@ -22,145 +80,194 @@
     margin-bottom: 20px;
 }
 .clnvx-plus {
-    color: #00a8cc;
+    color: #2563eb;
     font-size: 1.2em;
     margin-right: 3px;
 }
 .middle-header .logo-block a { text-decoration: none; }
 
-/* ── Top-header CTA button ───────────────────── */
-.top-header .col-md-6:last-child > a,
-.top-header .col-md-6:last-child > a:focus {
-    background-color: #00a8cc;
+/* ════════════════════════════════════════════════
+   TOP HEADER (dark navy bg)
+   ════════════════════════════════════════════════ */
+.top-header { background-color: #0a1f44 !important; }
+.top-header p, .top-header ul li a { color: #c8d8f0 !important; }
+.top-header .col-md-6:last-child > a {
+    background-color: #2563eb !important;
+    color: #fff !important;
 }
 .top-header .col-md-6:last-child > a:hover {
-    background-color: #1a2744;
+    background-color: #142d6e !important;
 }
 
-/* ── Navigation bar ──────────────────────────── */
+/* ════════════════════════════════════════════════
+   MIDDLE HEADER (white bg → dark text)
+   ════════════════════════════════════════════════ */
+.middle-header { background-color: #fff; }
+.middle-header .location h3,
+.middle-header .phone h3   { color: #0a1f44 !important; }
+.middle-header .location p,
+.middle-header .phone p    { color: #444 !important; }
+
+/* ════════════════════════════════════════════════
+   NAVIGATION (deep navy bg → white text)
+   ════════════════════════════════════════════════ */
 .ow-navigation {
-    background-color: #1a2744;
-    border-color: #1a2744;
+    background-color: #0a1f44 !important;
+    border-color: #0a1f44 !important;
 }
+.ow-navigation .navbar-nav > li > a { color: #e0eaff !important; }
 .ow-navigation .navbar-nav > .active > a,
 .ow-navigation .navbar-nav > .active > a:hover,
 .ow-navigation .navbar-nav > .active > a:focus,
 .ow-navigation .navbar-nav > li > a:hover,
 .ow-navigation .navbar-nav > li > a:focus {
-    background-color: #00a8cc;
-    color: #fff;
+    background-color: #2563eb !important;
+    color: #fff !important;
 }
 
-/* ── Hero banner CTA button ──────────────────── */
-.banner-left a {
-    background-color: #00a8cc;
-    border-color: #00a8cc;
-}
-.banner-left a:hover {
-    background-color: #1a2744;
-    border-color: #1a2744;
-}
+/* ════════════════════════════════════════════════
+   FEATURE HIGHLIGHT BOXES (dark navy bg → white text)
+   ════════════════════════════════════════════════ */
+.message-borad { background-color: #f4f7fc; }
+.emargency-case { background-color: #0a1f44 !important; }
+.opening-hours  { background-color: #142d6e !important; }
+.message-block h3 { color: #fff !important; }
+.message-block p  { color: #c8d8f0 !important; }
+.message-block a  { color: #7eb8ff !important; }
+.message-block a:hover { color: #fff !important; }
 
-/* ── Message board (feature boxes) ──────────── */
-.message-borad { background-color: #f9f9f9; }
-.emargency-case { background-color: #1a2744; }
-.opening-hours  { background-color: #00a8cc; }
-.message-block a { color: #fff; }
-.message-block a:hover { color: #d0f0fa; }
+/* ════════════════════════════════════════════════
+   ABOUT / SERVICE SECTION (white bg → dark text)
+   ════════════════════════════════════════════════ */
+.service-section { background-color: #fff; }
+.service-section .section-header h3 { color: #0a1f44 !important; }
+.service-section .section-header p  { color: #333 !important; }
+.service-block-content h3 { color: #0a1f44 !important; }
+.service-block-content p  { color: #444 !important; }
+.service-block-icon { background-color: #0a1f44 !important; }
+.service-block:hover .service-block-icon { background-color: #2563eb !important; }
 
-/* ── Section headers underline color ─────────── */
+/* Section header underlines */
 .section-header h3:before,
-.section-header h3:after {
-    background-color: #00a8cc;
-}
+.section-header h3:after { background-color: #2563eb !important; }
 
-/* ── Service block icon hover ─────────────────── */
-.service-block:hover .service-block-icon {
-    background-color: #00a8cc;
-}
-
-/* ── Appointment form button ─────────────────── */
+/* Appointment form (white bg → dark text) */
+.appoinment-form { background-color: #f4f7fc !important; }
+.appoinment-form h3 { color: #0a1f44 !important; }
 .appoinment-form .btn-submit {
-    background-color: #00a8cc;
-    border-color: #00a8cc;
+    background-color: #2563eb !important;
+    border-color: #2563eb !important;
+    color: #fff !important;
 }
 .appoinment-form .btn-submit:hover {
-    background-color: #1a2744;
-    border-color: #1a2744;
+    background-color: #0a1f44 !important;
+    border-color: #0a1f44 !important;
 }
-.appoinment-form h3 { color: #1a2744; }
 
-/* ── Call-out CTA banner ─────────────────────── */
-.call-out { background-color: #1a2744; }
-.call-out-content span { color: #00a8cc; }
+/* ════════════════════════════════════════════════
+   CTA CALL-OUT (deep navy bg → white text)
+   ════════════════════════════════════════════════ */
+.call-out { background-color: #0a1f44 !important; }
+.call-out-content h3 { color: #fff !important; }
+.call-out-content p  { color: #c8d8f0 !important; }
+.call-out-content span { color: #7eb8ff !important; }
 .call-out-content a {
-    background-color: #00a8cc;
-    color: #fff;
+    background-color: #2563eb !important;
+    color: #fff !important;
+    border-color: #2563eb !important;
 }
 .call-out-content a:hover {
-    background-color: #fff;
-    color: #1a2744;
+    background-color: #fff !important;
+    color: #0a1f44 !important;
 }
 
-/* ── What We Do Best (products) ──────────────── */
+/* ════════════════════════════════════════════════
+   PRODUCTS — WHAT WE DO BEST
+   ════════════════════════════════════════════════ */
+.what-we-do-block-content h5 { color: #fff !important; }
+.what-we-do-block-content p  { color: #e0eaff !important; }
 .what-we-do-block:hover .what-we-do-block-content {
-    background-color: rgba(0,168,204,0.85);
+    background-color: rgba(10,31,68,0.88) !important;
 }
+/* Title block */
+.what-we-do-title .what-we-do-block-content h3 { color: #fff !important; }
+.what-we-do-title .what-we-do-block-content p  { color: #c8d8f0 !important; }
 
-/* ── We Are Best section ─────────────────────── */
-.we-are-best { background-color: #f5f7fa; }
-.we-are-best-block { border-left: 3px solid #00a8cc; }
+/* ════════════════════════════════════════════════
+   WHY CLENIVAX — WE ARE BEST (light bg → dark text)
+   ════════════════════════════════════════════════ */
+.we-are-best { background-color: #f4f7fc !important; }
+.we-are-best .section-header h3 { color: #0a1f44 !important; }
+.we-are-best .section-header p  { color: #333 !important; }
+.we-are-best-block { border-left: 3px solid #2563eb !important; }
+.we-are-best-icon  { background-color: #2563eb !important; }
+.we-are-best-content h3 { color: #0a1f44 !important; }
+.we-are-best-content p  { color: #444 !important; }
 
-/* ── Accordion panel ─────────────────────────── */
-.departments .panel-heading a { color: #1a2744; }
-.departments .panel-heading a:hover { color: #00a8cc; }
-.departments .panel-body a { color: #00a8cc; }
+/* Accordion / departments (dark navy bg → white text) */
+.departments { background-color: #0a1f44; }
+.departments .section-header h3 { color: #fff !important; }
+.departments .panel-default { background-color: transparent; border-color: rgba(255,255,255,0.15); }
+.departments .panel-heading { background-color: transparent !important; }
+.departments .panel-heading a { color: #e0eaff !important; }
+.departments .panel-heading a:hover { color: #7eb8ff !important; }
+.departments .panel-body { background-color: rgba(10,31,68,0.6); }
+.departments .panel-body p { color: #c8d8f0 !important; }
+.departments .panel-body a { color: #7eb8ff !important; }
 
-/* ── Counter section ─────────────────────────── */
-.happy-customer > a {
-    background-color: #00a8cc;
-    border-color: #00a8cc;
+/* ════════════════════════════════════════════════
+   STATS COUNTER (dark overlay → white text)
+   ════════════════════════════════════════════════ */
+.happy-customer h3,
+.happy-customer h3.block-title { color: #fff !important; }
+.happy-customer p { color: #c8d8f0 !important; }
+.happy-customer p span { color: #7eb8ff !important; }
+.happy-customer a {
+    background-color: #2563eb !important;
+    border-color: #2563eb !important;
+    color: #fff !important;
 }
-.happy-customer > a:hover {
-    background-color: #1a2744;
-    border-color: #1a2744;
+.happy-customer a:hover {
+    background-color: #0a1f44 !important;
+    border-color: #0a1f44 !important;
 }
+.statistics-content span { color: #fff !important; }
+.statistics-content p    { color: #c8d8f0 !important; }
 
-/* ── Footer contact-details bar ──────────────── */
-.contact-details:before,
-.contact-details:after {
-    border-bottom-color: #1a2744;
-}
-.contact-details .detail-box               { background-color: #00a8cc; }
-.contact-details .detail-box i             { background-color: #1a7d9e; }
-.contact-details .detail-box.phone-box     { background-color: #1a7d9e; }
-.contact-details .detail-box.phone-box i   { background-color: #1a6b88; }
-.contact-details .detail-box.mail-box      { background-color: #1a6b88; }
-.contact-details .detail-box.mail-box i    { background-color: #155a75; }
+/* ════════════════════════════════════════════════
+   FOOTER (deep navy bg → white text)
+   ════════════════════════════════════════════════ */
+.footer-main { background-color: #0d2255 !important; }
 
-/* ── Footer widget title underline ───────────── */
-.footer-main .widget-title:before { background-color: #00a8cc; }
+/* Contact detail boxes */
+.contact-details .detail-box             { background-color: #1e5fa8 !important; }
+.contact-details .detail-box i           { background-color: #142d6e !important; }
+.contact-details .detail-box h4,
+.contact-details .detail-box p,
+.contact-details .detail-box a          { color: #fff !important; }
+.contact-details .detail-box.phone-box  { background-color: #142d6e !important; }
+.contact-details .detail-box.phone-box i{ background-color: #0a1f44 !important; }
+.contact-details .detail-box.mail-box   { background-color: #0a1f44 !important; }
+.contact-details .detail-box.mail-box i { background-color: #071630 !important; }
 
-/* ── Footer newsletter send button ───────────── */
+/* Widget titles and text */
+.footer-main .widget-title { color: #fff !important; }
+.footer-main .widget-title:before { background-color: #2563eb !important; }
+.footer-main .widget-about p { color: #a8c0e8 !important; }
+.footer-main .widget-about .time-schedule p { color: #a8c0e8 !important; }
+.footer-main .widget-about .time-schedule span { color: #fff !important; }
+.footer-main .widget-links ul li a { color: #a8c0e8 !important; }
+.footer-main .widget-links ul li a:hover { color: #fff !important; }
+.footer-main .widget-newsletter p { color: #a8c0e8 !important; }
+.footer-main .widget-newsletter .social h6 { color: #a8c0e8 !important; }
+.footer-main .widget-newsletter .social ul li a { color: #fff !important; }
 .footer-main .widget-newsletter .input-group span button {
-    background-color: #00a8cc;
+    background-color: #2563eb !important;
+    border-color: #2563eb !important;
+    color: #fff !important;
 }
 
-/* ── Bottom footer bar ───────────────────────── */
-.bottom-footer { background-color: #111416; }
-
-/* ── Banner shape colors ─────────────────────── */
-.home-banner .left-shape       { background-color: #00a8cc; }
-.home-banner .left-shape-blue  { background-color: #1a2744; }
-.home-banner .right-shape-blue { background-color: #1a7d9e; }
-
-/* ── Service block icon bg ───────────────────── */
-.service-block-icon { background-color: #1a2744; }
-
-/* ── We-are-best icon bg ─────────────────────── */
-.we-are-best-icon { background-color: #00a8cc; }
-
-/* ── Panel accordion active color ───────────── */
-.panel-heading a:hover,
-.panel-title a:hover { color: #00a8cc !important; }
-.panel-collapse .panel-body a { color: #00a8cc; }
+/* Bottom footer */
+.bottom-footer { background-color: #071630 !important; }
+.bottom-footer p, .bottom-footer a { color: #6b8ab8 !important; }
+.bottom-footer a:hover { color: #fff !important; }
