@@ -170,7 +170,7 @@
 .call-out { background-color: #0a1f44 !important; }
 .call-out-content h3 { color: #fff !important; }
 .call-out-content p  { color: #c8d8f0 !important; }
-.call-out-content span { color: #7eb8ff !important; }
+.call-out-content span { color: #fff !important; }
 .call-out-content a {
     background-color: #2563eb !important;
     color: #fff !important;
