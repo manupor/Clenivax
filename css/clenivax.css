@@ -271,3 +271,45 @@
 .bottom-footer { background-color: #071630 !important; }
 .bottom-footer p, .bottom-footer a { color: #6b8ab8 !important; }
 .bottom-footer a:hover { color: #fff !important; }
+
+/* ════════════════════════════════════════════════
+   HERO — shorter, full-width, centered text
+   ════════════════════════════════════════════════ */
+.banner-fullwidth {
+    padding-top: 80px !important;
+    padding-bottom: 70px !important;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+.home-banner {
+    padding-top: 0 !important;
+}
+
+/* ════════════════════════════════════════════════
+   FEATURE BOXES — equal height via flexbox
+   ════════════════════════════════════════════════ */
+.message-borad .row {
+    display: flex;
+    align-items: stretch;
+}
+.emargency-case,
+.opening-hours {
+    display: flex !important;
+    align-items: stretch;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.message-block {
+    display: flex !important;
+    flex-direction: column;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+    box-sizing: border-box;
+}
+.message-block p {
+    flex: 1;
+    margin-bottom: 30px !important;
+}
