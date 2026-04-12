@@ -292,11 +292,20 @@
 .home-banner .item {
     width: 100%;
 }
+.home-banner .item {
+    display: flex !important;
+    justify-content: center;
+}
+.home-banner .item > .col-md-12 {
+    float: none !important;
+    display: flex;
+    justify-content: center;
+}
 .banner-fullwidth {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
+    width: 100%;
     max-width: 700px;
-    margin: 0 auto;
     text-align: center;
 }
 
