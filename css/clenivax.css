@@ -493,8 +493,8 @@
     flex: 1;
     display: flex;
     align-items: center;
-    padding-top: 90px;
-    padding-bottom: 22px;
+    padding-top: 112px;
+    padding-bottom: 0px;
 }
 .home-banner .carousel,
 .home-banner .carousel-inner,
