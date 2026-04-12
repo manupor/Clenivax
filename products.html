@@ -1761,11 +1761,15 @@ $(document).ready(function () {
 
     var $sections = $('.product-category-section');
 
-    /* ---- Show a section: swap .active, reset scroll ---- */
+    /* ---- Init: force-hide all via inline style, show first ---- */
+    $sections.hide();
+    $('#cat-chg').show();
+
+    /* ---- Show a section (jQuery inline style beats any CSS rule) ---- */
     function showSection(id) {
         if (!id || !$(id).length) return;
-        $sections.removeClass('active');
-        $(id).addClass('active');
+        $sections.hide();
+        $(id).fadeIn(180);
         window.scrollTo(0, 0);
     }
 
@@ -1774,13 +1778,9 @@ $(document).ready(function () {
         $('.cat-parent').removeClass('active');
         $('.sub-cat li').removeClass('active-sub');
 
-        /* top-level link match */
         var $top = $('.cat-link[href="' + id + '"]');
-        if ($top.length) {
-            $top.closest('.cat-parent').addClass('active');
-        }
+        if ($top.length) $top.closest('.cat-parent').addClass('active');
 
-        /* sub-item match */
         var $sub = $('.sub-cat a[href="' + id + '"]').first();
         if ($sub.length) {
             $sub.closest('.cat-parent').addClass('active');
@@ -1788,7 +1788,7 @@ $(document).ready(function () {
         }
     }
 
-    /* ---- Toggle a sub-menu open/closed ---- */
+    /* ---- Toggle sub-menu ---- */
     function toggleSub($link) {
         var $sub = $link.closest('.cat-parent').find('.sub-cat');
         if (!$sub.length) return;
@@ -1804,6 +1804,7 @@ $(document).ready(function () {
     /* ---- Parent link with sub-menu ---- */
     $('.cat-link.has-sub').on('click', function (e) {
         e.preventDefault();
+        e.stopPropagation();
         var id = $(this).attr('href');
         toggleSub($(this));
         showSection(id);
@@ -1813,6 +1814,7 @@ $(document).ready(function () {
     /* ---- Sub-item link ---- */
     $('.sub-cat a').on('click', function (e) {
         e.preventDefault();
+        e.stopPropagation();
         var id = $(this).attr('href');
         showSection(id);
         setActive(id);
@@ -1821,6 +1823,7 @@ $(document).ready(function () {
     /* ---- Top-level link (no sub-menu) ---- */
     $('.cat-link:not(.has-sub)').on('click', function (e) {
         e.preventDefault();
+        e.stopPropagation();
         var id = $(this).attr('href');
         showSection(id);
         setActive(id);
