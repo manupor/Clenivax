@@ -265,99 +265,269 @@
         </div>
     </div>
 
-    <!-- PRODUCTS -->
-    <div id="products" class="container-fluid no-padding what-we-do-best">
-        <div class="what-we-do-left col-md-4 no-padding">
-            <img src="images/what-we-do-best.jpg" alt="Clenivax Products"/>
-        </div>
-        <div class="col-md-8 what-we-do-right no-padding">
-            <div class="col-md-4 col-sm-4 col-xs-6 no-padding">
-                <div class="what-we-do-block">
-                    <img src="images/what-we-do-best-block-bg.jpg" alt=""/>
-                    <div class="what-we-do-block-content">
-                        <i><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m2 22 1-1h3l9-9"/><path d="M3 21v-3l9-9"/><path d="m15 6 3.4-3.4a2.1 2.1 0 1 1 3 3L18 9l.4.4a2.1 2.1 0 1 1-3 3l-3.8-3.8a2.1 2.1 0 1 1 3-3l.4.4Z"/></svg></i>
-                        <h5>Clenivax&trade; 1mL</h5>
-                        <p>Compact precision for small incision sites and catheter insertions</p>
+    <!-- PRODUCTS - MEDICOSWAB STYLE WITH SIDEBAR -->
+    <div id="products" class="container-fluid no-padding medicoswab-products">
+        <div class="container">
+            <!-- Page Title -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="page-title">
+                        <h1>Products</h1>
+                        <p class="breadcrumb"><a href="#">Home</a> &gt; Products</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-4 col-xs-6 no-padding">
-                <div class="what-we-do-block">
-                    <img src="images/what-we-do-best-block-bg.jpg" alt=""/>
-                    <div class="what-we-do-block-content">
-                        <i><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="22" x2="18" y1="12" y2="12"/><line x1="6" x2="2" y1="12" y2="12"/><line x1="12" x2="12" y1="6" y2="2"/><line x1="12" x2="12" y1="22" y2="18"/></svg></i>
-                        <h5>Frepp&trade; 1.5mL</h5>
-                        <p>Ideal balance of coverage and precision for mid-size procedures</p>
+
+            <div class="row">
+                <!-- Left Sidebar - Product Categories -->
+                <div class="col-md-3 col-sm-4 product-sidebar">
+                    <div class="sidebar-widget">
+                        <h3 class="sidebar-title">Product Categories</h3>
+                        <ul class="category-menu">
+                            <li class="has-submenu">
+                                <a href="#specimen-swabs" class="cat-link">Specimen Collection Swab <i class="fa fa-chevron-right"></i></a>
+                                <ul class="submenu">
+                                    <li><a href="#nasopharyngeal">Nasopharyngeal Swabs</a></li>
+                                    <li><a href="#oropharyngeal">Oropharyngeal Swabs</a></li>
+                                    <li><a href="#gynecological">Gynecological Swabs</a></li>
+                                    <li><a href="#anal">Anal Swabs</a></li>
+                                    <li><a href="#medical-cleaning">Medical Cleaning Swabs</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#cleanroom" class="cat-link">Cleanroom Swabs</a></li>
+                            <li class="has-submenu active">
+                                <a href="#chg-applicators" class="cat-link active">CHG Swab &amp; Applicator <i class="fa fa-chevron-down"></i></a>
+                                <ul class="submenu show">
+                                    <li><a href="#chg-swabs">CHG Swabs</a></li>
+                                    <li class="active"><a href="#chg-applicators">CHG Applicators</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#sampling-kit" class="cat-link">Sampling Kit</a></li>
+                            <li><a href="#vtm-kit" class="cat-link">VTM Kit</a></li>
+                            <li class="has-submenu">
+                                <a href="#saliva-kit" class="cat-link">Saliva Collection Kit <i class="fa fa-chevron-right"></i></a>
+                                <ul class="submenu">
+                                    <li><a href="#dna-kit">DNA Collection Kit</a></li>
+                                    <li><a href="#rna-kit">RNA Collection Kit</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#cervical-brush" class="cat-link">Cervical Cytology Brush</a></li>
+                            <li class="has-submenu">
+                                <a href="#blood-tubes" class="cat-link">Vacuum Blood Collection Tube <i class="fa fa-chevron-right"></i></a>
+                                <ul class="submenu">
+                                    <li><a href="#plasma-tube">Plasma Blood Collection Tube</a></li>
+                                    <li><a href="#whole-blood">Whole Blood Collection Tube</a></li>
+                                    <li><a href="#serum-tube">Serum Blood Collection Tube</a></li>
+                                </ul>
+                            </li>
+                            <li class="has-submenu">
+                                <a href="#transport-medium" class="cat-link">Transport Medium <i class="fa fa-chevron-right"></i></a>
+                                <ul class="submenu">
+                                    <li><a href="#transport-swab">Transport Swab</a></li>
+                                    <li><a href="#virus-medium">Virus Transport Medium</a></li>
+                                    <li><a href="#cell-preservation">Cell Preservation Solution</a></li>
+                                    <li><a href="#normal-saline">Normal Saline</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#sample-containers" class="cat-link">Sample Storage Containers</a></li>
+                            <li><a href="#alcohol-wipes" class="cat-link">Alcohol Wipes</a></li>
+                            <li><a href="#face-mask" class="cat-link">Face Mask</a></li>
+                            <li><a href="#featured" class="cat-link">Featured Products</a></li>
+                        </ul>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4 col-sm-4 col-xs-6 no-padding">
-                <div class="what-we-do-block">
-                    <img src="images/what-we-do-best-block-bg.jpg" alt=""/>
-                    <div class="what-we-do-block-content">
-                        <i><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></i>
-                        <h5>Clenivax&trade; 3mL</h5>
-                        <p>Standard coverage for most general surgical preparations</p>
+
+                <!-- Right Content - Product Grid -->
+                <div class="col-md-9 col-sm-8 product-main-content">
+                    <div class="products-list-header">
+                        <h2>CHG Applicators</h2>
+                        <p class="category-desc">Chlorhexidine Gluconate Medical Disinfectant Applicators - MEDICO specialized in medical (chlorhexidine gluconate) CHG applicators, chloraprep applicator. Welcome to buy CHG applicators in stock here and get free sample from our factory.</p>
                     </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-4 col-xs-6 no-padding">
-                <div class="what-we-do-block">
-                    <img src="images/what-we-do-best-block-bg.jpg" alt=""/>
-                    <div class="what-we-do-block-content">
-                        <i><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" x2="14" y1="3" y2="10"/><line x1="3" x2="10" y1="21" y2="14"/></svg></i>
-                        <h5>Clenivax&trade; 10.5mL</h5>
-                        <p>Extended coverage for larger surgical field preparations</p>
+
+                    <!-- Product Grid -->
+                    <div class="products-grid-container">
+                        <div class="row">
+                            
+                            <!-- Product 1: MSA-260 (26ml) -->
+                            <div class="col-md-4 col-sm-6 product-item">
+                                <div class="product-thumb">
+                                    <div class="product-image-wrapper">
+                                        <a href="#product-msa260">
+                                            <img src="images/product-placeholder.jpg" alt="MSA-260 CHG Medical Disinfectant Applicator" onerror="this.src='images/what-we-do-best.jpg'"/>
+                                        </a>
+                                        <span class="product-badge featured">Featured</span>
+                                    </div>
+                                    <div class="product-info">
+                                        <h4 class="product-name">
+                                            <a href="#product-msa260">MSA-260 CHG Medical Disinfectant Applicator with 26.0ML Liquid</a>
+                                        </h4>
+                                        <div class="product-meta">
+                                            <span class="model">Model: MSA-260</span>
+                                            <span class="capacity">26ML Liquid</span>
+                                        </div>
+                                        <p class="product-desc">Preoperative skin disinfection with 2% chlorhexidine gluconate and 70% isopropanol. FDA-standard formulation kills more bacteria than traditional iodophors.</p>
+                                        <div class="product-specs-list">
+                                            <span class="spec-item">2% CHG + 70% IPA</span>
+                                            <span class="spec-item">Polyurethane Foam</span>
+                                            <span class="spec-item">ABS Handle</span>
+                                        </div>
+                                        <a href="#contact" class="btn-enquiry">Enquiry</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product 2: MSA-105 (10.5ml) -->
+                            <div class="col-md-4 col-sm-6 product-item">
+                                <div class="product-thumb">
+                                    <div class="product-image-wrapper">
+                                        <a href="#product-msa105">
+                                            <img src="images/product-placeholder.jpg" alt="MSA-105 CHG Medical Disinfectant Applicator" onerror="this.src='images/what-we-do-best.jpg'"/>
+                                        </a>
+                                    </div>
+                                    <div class="product-info">
+                                        <h4 class="product-name">
+                                            <a href="#product-msa105">MSA-105 CHG Medical Disinfectant Applicator with 10.5ML Liquid</a>
+                                        </h4>
+                                        <div class="product-meta">
+                                            <span class="model">Model: MSA-105</span>
+                                            <span class="capacity">10.5ML Liquid</span>
+                                        </div>
+                                        <p class="product-desc">Medical grade 100PPI open-cell polyurethane foam with white ABS handle. Ideal for surgical site preparation and catheter maintenance.</p>
+                                        <div class="product-specs-list">
+                                            <span class="spec-item">100PPI Foam</span>
+                                            <span class="spec-item">&ge;48h Activity</span>
+                                            <span class="spec-item">Latex-free</span>
+                                        </div>
+                                        <a href="#contact" class="btn-enquiry">Enquiry</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product 3: MSA-50 (5.0ml) -->
+                            <div class="col-md-4 col-sm-6 product-item">
+                                <div class="product-thumb">
+                                    <div class="product-image-wrapper">
+                                        <a href="#product-msa50-5ml">
+                                            <img src="images/product-placeholder.jpg" alt="MSA-50 CHG Medical Disinfectant Applicator 5.0ml" onerror="this.src='images/what-we-do-best.jpg'"/>
+                                        </a>
+                                    </div>
+                                    <div class="product-info">
+                                        <h4 class="product-name">
+                                            <a href="#product-msa50-5ml">MSA-50 CHG Medical Disinfectant Applicator with 5.0ml Liquid</a>
+                                        </h4>
+                                        <div class="product-meta">
+                                            <span class="model">Model: MSA-50</span>
+                                            <span class="capacity">5.0ML Liquid</span>
+                                        </div>
+                                        <p class="product-desc">Made of medical grade 100PPI open-cell polyurethane foam. Perfect for pre-injection, IV insertions, dialysis procedures and routine venipunctures.</p>
+                                        <div class="product-specs-list">
+                                            <span class="spec-item">Anti-MRSA</span>
+                                            <span class="spec-item">Anti-VRE</span>
+                                            <span class="spec-item">Anti-CRE</span>
+                                        </div>
+                                        <a href="#contact" class="btn-enquiry">Enquiry</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product 4: MSA-50 (3.0ml) -->
+                            <div class="col-md-4 col-sm-6 product-item">
+                                <div class="product-thumb">
+                                    <div class="product-image-wrapper">
+                                        <a href="#product-msa50-3ml">
+                                            <img src="images/product-placeholder.jpg" alt="MSA-50 CHG Medical Disinfectant Applicator 3.0ml" onerror="this.src='images/what-we-do-best.jpg'"/>
+                                        </a>
+                                    </div>
+                                    <div class="product-info">
+                                        <h4 class="product-name">
+                                            <a href="#product-msa50-3ml">MSA-50 CHG Medical Disinfectant Applicator with 3.0ml Liquid</a>
+                                        </h4>
+                                        <div class="product-meta">
+                                            <span class="model">Model: MSA-50</span>
+                                            <span class="capacity">3.0ML Liquid</span>
+                                        </div>
+                                        <p class="product-desc">Compact applicator for skin antisepsis preparation. Long-handled plastic rod avoids hand contact with sponge head and patient's skin.</p>
+                                        <div class="product-specs-list">
+                                            <span class="spec-item">Compact Size</span>
+                                            <span class="spec-item">No Activation</span>
+                                            <span class="spec-item">Single-use</span>
+                                        </div>
+                                        <a href="#contact" class="btn-enquiry">Enquiry</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product 5: MSA-50S (3.0ml) -->
+                            <div class="col-md-4 col-sm-6 product-item">
+                                <div class="product-thumb">
+                                    <div class="product-image-wrapper">
+                                        <a href="#product-msa50s">
+                                            <img src="images/product-placeholder.jpg" alt="MSA-50S CHG Medical Disinfectant Applicator" onerror="this.src='images/what-we-do-best.jpg'"/>
+                                        </a>
+                                    </div>
+                                    <div class="product-info">
+                                        <h4 class="product-name">
+                                            <a href="#product-msa50s">MSA-50S CHG Medical Disinfectant Applicator with 3.0ml Liquid</a>
+                                        </h4>
+                                        <div class="product-meta">
+                                            <span class="model">Model: MSA-50S</span>
+                                            <span class="capacity">3.0ML Liquid</span>
+                                        </div>
+                                        <p class="product-desc">Compact design with 2% CHG and 70% IPA. Ideal for smaller prep areas and pediatric applications. Penetrates first 5 layers of epidermis.</p>
+                                        <div class="product-specs-list">
+                                            <span class="spec-item">Small Size</span>
+                                            <span class="spec-item">Pediatric Use</span>
+                                            <span class="spec-item">Deep Penetration</span>
+                                        </div>
+                                        <a href="#contact" class="btn-enquiry">Enquiry</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product 6: Chlorhexidine General -->
+                            <div class="col-md-4 col-sm-6 product-item">
+                                <div class="product-thumb">
+                                    <div class="product-image-wrapper">
+                                        <a href="#product-chg-general">
+                                            <img src="images/product-placeholder.jpg" alt="Chlorhexidine Gluconate Medical Disinfectant Applicator" onerror="this.src='images/what-we-do-best.jpg'"/>
+                                        </a>
+                                        <span class="product-badge new">New</span>
+                                    </div>
+                                    <div class="product-info">
+                                        <h4 class="product-name">
+                                            <a href="#product-chg-general">Chlorhexidine Gluconate Medical Disinfectant Applicator</a>
+                                        </h4>
+                                        <div class="product-meta">
+                                            <span class="model">CHG Applicator</span>
+                                            <span class="capacity">Multiple Sizes</span>
+                                        </div>
+                                        <p class="product-desc">Professional medical disinfectant applicator for preoperative skin preparation. Reduces bacteria that could cause skin infections.</p>
+                                        <div class="product-specs-list">
+                                            <span class="spec-item">Broad Spectrum</span>
+                                            <span class="spec-item">Long-lasting</span>
+                                            <span class="spec-item">User-friendly</span>
+                                        </div>
+                                        <a href="#contact" class="btn-enquiry">Enquiry</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-4 col-xs-6 no-padding what-we-do-title">
-                <div class="what-we-do-block">
-                    <img src="images/what-we-do-best-block-title-bg.jpg" alt=""/>
-                    <div class="what-we-do-block-content">
-                        <h3>Our Product Line</h3>
-                        <p>Complete portfolio for every surgical need</p>
-                        <span><img src="images/section-seprator.png" alt=""/></span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-4 col-xs-6 no-padding">
-                <div class="what-we-do-block">
-                    <img src="images/what-we-do-best-block-bg.jpg" alt=""/>
-                    <div class="what-we-do-block-content">
-                        <i><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"/><path d="M8.5 2h7"/><path d="M7 16h10"/></svg></i>
-                        <h5>Clenivax&trade; 26mL</h5>
-                        <p>Maximum volume for extensive site preparation requirements</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-4 col-xs-6 no-padding">
-                <div class="what-we-do-block">
-                    <img src="images/what-we-do-best-block-bg.jpg" alt=""/>
-                    <div class="what-we-do-block-content">
-                        <i><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg></i>
-                        <h5>Clenivax&trade; Clear</h5>
-                        <p>Colorless formula when a dye-free solution is clinically preferred</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-4 col-xs-6 no-padding">
-                <div class="what-we-do-block">
-                    <img src="images/what-we-do-best-block-bg.jpg" alt=""/>
-                    <div class="what-we-do-block-content">
-                        <i><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 7 6.82 21.18a2.83 2.83 0 0 1-3.99-.01v0a2.83 2.83 0 0 1 0-4L17 3"/><path d="m16 2 6 6"/><path d="M12 16H4"/></svg></i>
-                        <h5>Clenivax&trade; PurPrep&trade;</h5>
-                        <p>Alcohol-based alternative for CHG-sensitive patients</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-4 col-xs-6 no-padding">
-                <div class="what-we-do-block">
-                    <img src="images/what-we-do-best-block-bg.jpg" alt=""/>
-                    <div class="what-we-do-block-content">
-                        <i><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></i>
-                        <h5>Hi-Lite Orange</h5>
-                        <p>Highly visible tint for confirmed site coverage</p>
+
+                    <!-- Pagination -->
+                    <div class="pagination-wrapper">
+                        <ul class="pagination">
+                            <li><a href="#" class="active">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><span>...</span></li>
+                            <li><a href="#">10</a></li>
+                            <li><a href="#" class="next">&raquo;</a></li>
+                            <li><a href="#" class="last">Last &raquo;</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
