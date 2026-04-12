@@ -108,14 +108,14 @@
                         <h3 class="sidebar-section-title">Product Categories</h3>
                         <ul class="sidebar-category-list">
                             <li class="cat-parent active">
-                                <a class="cat-link has-sub" href="#cat-chg" data-toggle="collapse" data-target="#sub-chg" aria-expanded="true">CHG Swab &amp; Applicator <i class="fa fa-chevron-down"></i></a>
-                                <ul class="sub-cat collapse in" id="sub-chg">
+                                <a class="cat-link has-sub" href="#cat-chg" aria-expanded="true">CHG Swab &amp; Applicator <i class="fa fa-chevron-down"></i></a>
+                                <ul class="sub-cat" id="sub-chg">
                                     <li class="active-sub"><a href="#cat-chg">CHG Applicators</a></li>
                                 </ul>
                             </li>
                             <li class="cat-parent">
-                                <a class="cat-link has-sub" href="#cat-nasal" data-toggle="collapse" data-target="#sub-swabs" aria-expanded="false">Specimen Collection Swab <i class="fa fa-chevron-right"></i></a>
-                                <ul class="sub-cat collapse" id="sub-swabs">
+                                <a class="cat-link has-sub" href="#cat-nasal" aria-expanded="false">Specimen Collection Swab <i class="fa fa-chevron-right"></i></a>
+                                <ul class="sub-cat" id="sub-swabs" style="display:none">
                                     <li><a href="#cat-nasal">Nasopharyngeal Swabs</a></li>
                                     <li><a href="#cat-oral">Oropharyngeal Swabs</a></li>
                                     <li><a href="#cat-gyn">Gynecological Swabs</a></li>
@@ -129,15 +129,15 @@
                                 <a class="cat-link" href="#cat-sampling">Sampling Kit</a>
                             </li>
                             <li class="cat-parent">
-                                <a class="cat-link has-sub" href="#cat-vtm" data-toggle="collapse" data-target="#sub-vtm" aria-expanded="false">VTM Kit <i class="fa fa-chevron-right"></i></a>
-                                <ul class="sub-cat collapse" id="sub-vtm">
+                                <a class="cat-link has-sub" href="#cat-vtm" aria-expanded="false">VTM Kit <i class="fa fa-chevron-right"></i></a>
+                                <ul class="sub-cat" id="sub-vtm" style="display:none">
                                     <li><a href="#cat-vtm">Inactivated Type</a></li>
                                     <li><a href="#cat-vtm">Non-Inactivated</a></li>
                                 </ul>
                             </li>
                             <li class="cat-parent">
-                                <a class="cat-link has-sub" href="#cat-saliva" data-toggle="collapse" data-target="#sub-saliva" aria-expanded="false">Saliva Collection Kit <i class="fa fa-chevron-right"></i></a>
-                                <ul class="sub-cat collapse" id="sub-saliva">
+                                <a class="cat-link has-sub" href="#cat-saliva" aria-expanded="false">Saliva Collection Kit <i class="fa fa-chevron-right"></i></a>
+                                <ul class="sub-cat" id="sub-saliva" style="display:none">
                                     <li><a href="#cat-saliva">DNA Collection Kit</a></li>
                                     <li><a href="#cat-saliva">RNA Collection Kit</a></li>
                                 </ul>
@@ -146,16 +146,16 @@
                                 <a class="cat-link" href="#cat-cervical">Cervical Cytology Brush</a>
                             </li>
                             <li class="cat-parent">
-                                <a class="cat-link has-sub" href="#cat-blood" data-toggle="collapse" data-target="#sub-blood" aria-expanded="false">Vacuum Blood Collection Tube <i class="fa fa-chevron-right"></i></a>
-                                <ul class="sub-cat collapse" id="sub-blood">
+                                <a class="cat-link has-sub" href="#cat-blood" aria-expanded="false">Vacuum Blood Collection Tube <i class="fa fa-chevron-right"></i></a>
+                                <ul class="sub-cat" id="sub-blood" style="display:none">
                                     <li><a href="#cat-blood">Plasma Collection Tube</a></li>
                                     <li><a href="#cat-blood">Whole Blood Tube</a></li>
                                     <li><a href="#cat-blood">Serum Collection Tube</a></li>
                                 </ul>
                             </li>
                             <li class="cat-parent">
-                                <a class="cat-link has-sub" href="#cat-transport" data-toggle="collapse" data-target="#sub-transport" aria-expanded="false">Transport Medium <i class="fa fa-chevron-right"></i></a>
-                                <ul class="sub-cat collapse" id="sub-transport">
+                                <a class="cat-link has-sub" href="#cat-transport" aria-expanded="false">Transport Medium <i class="fa fa-chevron-right"></i></a>
+                                <ul class="sub-cat" id="sub-transport" style="display:none">
                                     <li><a href="#cat-transport">Virus Transport Medium</a></li>
                                     <li><a href="#cat-cell">Cell Preservation Solution</a></li>
                                 </ul>
@@ -1759,67 +1759,71 @@
 <script>
 $(document).ready(function () {
 
-    var $sections  = $('.product-category-section');
-    var $sideLinks = $('.sidebar-category-list a[href^="#cat-"]');
+    var $sections = $('.product-category-section');
 
-    /* ============================================================
-       CORE: toggle .active class — CSS handles show/hide + fade
-    ============================================================ */
-    function showSection(sectionId) {
-        /* swap active section */
+    /* ---- Show a section: swap .active, reset scroll ---- */
+    function showSection(id) {
+        if (!id || !$(id).length) return;
         $sections.removeClass('active');
-        $(sectionId).addClass('active');
-
-        /* reset scroll of the content column to top */
-        $('.products-content-area').scrollTop(0);
+        $(id).addClass('active');
         window.scrollTo(0, 0);
-
-        setActive(sectionId);
     }
 
-    /* ============================================================
-       ACTIVE STATE: sidebar highlight + collapse expand
-    ============================================================ */
-    function setActive(sectionId) {
+    /* ---- Sidebar highlight ---- */
+    function setActive(id) {
         $('.cat-parent').removeClass('active');
         $('.sub-cat li').removeClass('active-sub');
 
-        var $link = $sideLinks.filter('[href="' + sectionId + '"]').first();
+        /* top-level link match */
+        var $top = $('.cat-link[href="' + id + '"]');
+        if ($top.length) {
+            $top.closest('.cat-parent').addClass('active');
+        }
 
-        if ($link.length) {
-            $link.closest('.cat-parent').addClass('active');
-            $link.closest('.sub-cat li').addClass('active-sub');
-
-            /* auto-expand parent collapse if closed */
-            var $subCat = $link.closest('.sub-cat');
-            if ($subCat.length && !$subCat.hasClass('in')) {
-                $subCat.collapse('show');
-                $('[data-target="#' + $subCat.attr('id') + '"]').attr('aria-expanded', 'true');
-            }
-        } else {
-            /* top-level link with no sub-item match */
-            $('.cat-link[href="' + sectionId + '"]').closest('.cat-parent').addClass('active');
+        /* sub-item match */
+        var $sub = $('.sub-cat a[href="' + id + '"]').first();
+        if ($sub.length) {
+            $sub.closest('.cat-parent').addClass('active');
+            $sub.closest('li').addClass('active-sub');
         }
     }
 
-    /* ============================================================
-       CLICK — sub-item links
-    ============================================================ */
-    $('.sidebar-category-list .sub-cat a').on('click', function (e) {
+    /* ---- Toggle a sub-menu open/closed ---- */
+    function toggleSub($link) {
+        var $sub = $link.closest('.cat-parent').find('.sub-cat');
+        if (!$sub.length) return;
+        if ($sub.is(':visible')) {
+            $sub.slideUp(180);
+            $link.attr('aria-expanded', 'false');
+        } else {
+            $sub.slideDown(180);
+            $link.attr('aria-expanded', 'true');
+        }
+    }
+
+    /* ---- Parent link with sub-menu ---- */
+    $('.cat-link.has-sub').on('click', function (e) {
         e.preventDefault();
-        showSection($(this).attr('href'));
+        var id = $(this).attr('href');
+        toggleSub($(this));
+        showSection(id);
+        setActive(id);
     });
 
-    /* ============================================================
-       CLICK — top-level .cat-link
-       Bootstrap collapse fires via its own handler; we only swap section.
-    ============================================================ */
-    $('.sidebar-category-list .cat-link').on('click', function (e) {
+    /* ---- Sub-item link ---- */
+    $('.sub-cat a').on('click', function (e) {
         e.preventDefault();
-        var href = $(this).attr('href');
-        if (href && $(href).length) {
-            showSection(href);
-        }
+        var id = $(this).attr('href');
+        showSection(id);
+        setActive(id);
+    });
+
+    /* ---- Top-level link (no sub-menu) ---- */
+    $('.cat-link:not(.has-sub)').on('click', function (e) {
+        e.preventDefault();
+        var id = $(this).attr('href');
+        showSection(id);
+        setActive(id);
     });
 
 });
