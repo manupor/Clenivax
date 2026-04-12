@@ -172,7 +172,7 @@
 
                 <!-- Right Content - Products -->
                 <div class="col-md-9 col-sm-8 products-content-area">
-                    <div id="cat-chg" class="product-category-section" style="margin-top:0;border-top:none;">
+                    <div id="cat-chg" class="product-category-section">
                     <div class="category-header">
                         <h2>CHG Applicators</h2>
                         <p class="category-desc">MEDICO specialized in medical (chlorhexidine gluconate) CHG applicators, chloraprep applicator. Welcome to buy CHG applicators in stock here and get free sample from our factory.</p>
@@ -1959,84 +1959,98 @@
 <script src="js/functions.js"></script>
 <script>
 $(document).ready(function () {
-    var OFFSET = 110;
 
-    /* ---- Smooth scroll for all sidebar anchor links ---- */
-    $('.sidebar-category-list a[href^="#cat-"]').on('click', function (e) {
-        var targetId = $(this).attr('href');
-        var $target = $(targetId);
-        if ($target.length) {
-            e.preventDefault();
-            $('html, body').animate({ scrollTop: $target.offset().top - OFFSET }, 450, 'swing');
+    var $sections   = $('.product-category-section');
+    var $sideLinks  = $('.sidebar-category-list a[href^="#cat-"]');
+
+    /* ============================================================
+       CORE: show one section, hide the rest
+    ============================================================ */
+    function showSection(sectionId) {
+        $sections.hide();
+        var $target = $(sectionId);
+        if (!$target.length) return;
+        $target.show();
+
+        /* Scroll to top of product area (header stays visible) */
+        var areaTop = $('.products-content-area').offset().top - 100;
+        if ($(window).scrollTop() > areaTop) {
+            $('html, body').animate({ scrollTop: areaTop }, 250);
         }
-    });
 
-    /* ---- Prevent page-jump when clicking collapse-toggle parents ---- */
-    /* Bootstrap will handle the collapse via data-target; we handle scroll here */
-    $('.cat-link.has-sub').on('click', function (e) {
-        var href = $(this).attr('href');
-        /* scroll to the section the parent points at */
-        if (href && href.charAt(0) === '#' && $(href).length) {
-            e.preventDefault();
-            $('html, body').animate({ scrollTop: $(href).offset().top - OFFSET }, 450, 'swing');
-        }
-        /* chevron rotation is handled by Bootstrap aria-expanded automatically */
-    });
+        setActive(sectionId);
+    }
 
-    /* ---- Active state on scroll ---- */
-    var sections = [];
-    $('.product-category-section[id]').each(function () {
-        sections.push({ id: $(this).attr('id'), top: $(this).offset().top });
-    });
-
-    function updateActive() {
-        var scrollTop = $(window).scrollTop() + OFFSET + 20;
-        var current = null;
-        for (var i = sections.length - 1; i >= 0; i--) {
-            if (scrollTop >= sections[i].top) {
-                current = sections[i].id;
-                break;
-            }
-        }
-        if (!current) return;
-
-        /* Remove all active states */
+    /* ============================================================
+       ACTIVE STATE: highlight sidebar link & expand its parent
+    ============================================================ */
+    function setActive(sectionId) {
         $('.cat-parent').removeClass('active');
         $('.sub-cat li').removeClass('active-sub');
 
-        /* Find matching sidebar link and activate */
-        var $link = $('.sidebar-category-list a[href="#' + current + '"]').first();
-        if ($link.length) {
-            var $parentLi = $link.closest('.cat-parent');
-            $parentLi.addClass('active');
+        /* Try sub-item link first */
+        var $link = $sideLinks.filter('[href="' + sectionId + '"]').first();
 
+        if ($link.length) {
+            $link.closest('.cat-parent').addClass('active');
             var $subLi = $link.closest('.sub-cat li');
             $subLi.addClass('active-sub');
 
-            /* Auto-expand the collapse containing this link */
+            /* Auto-expand parent collapse if it is closed */
             var $subCat = $link.closest('.sub-cat');
             if ($subCat.length && !$subCat.hasClass('in')) {
                 $subCat.collapse('show');
-                /* Update aria on toggle */
                 $('[data-target="#' + $subCat.attr('id') + '"]').attr('aria-expanded', 'true');
             }
+        } else {
+            /* No sub-item match — activate the top-level parent link */
+            $('.cat-link[href="' + sectionId + '"]').closest('.cat-parent').addClass('active');
         }
     }
 
-    $(window).on('scroll', updateActive);
-    updateActive();
+    /* ============================================================
+       INIT: hide everything, show first category (CHG)
+    ============================================================ */
+    $sections.hide();
+    $('#cat-chg').show();
+    setActive('#cat-chg');
 
-    /* ---- Make sidebar sticky while scrolling ---- */
-    var $sidebar = $('.category-sidebar');
-    var sidebarTop = $sidebar.closest('.sidebar-column').offset().top;
-    $(window).on('scroll', function () {
-        var scrollTop = $(window).scrollTop();
-        if (scrollTop > sidebarTop - OFFSET) {
-            $sidebar.css({ position: 'sticky', top: OFFSET + 'px' });
-        } else {
-            $sidebar.css({ position: 'static' });
-        }
+    /* ============================================================
+       CLICK — sub-item links  (inside .sub-cat)
+    ============================================================ */
+    $('.sidebar-category-list .sub-cat a').on('click', function (e) {
+        e.preventDefault();
+        showSection($(this).attr('href'));
     });
+
+    /* ============================================================
+       CLICK — top-level .cat-link  (with or without sub-menu)
+       Bootstrap handles the collapse via data-toggle/data-target.
+       We handle the section display here.
+    ============================================================ */
+    $('.sidebar-category-list .cat-link').on('click', function (e) {
+        e.preventDefault();          /* stop browser anchor jump    */
+        var href = $(this).attr('href');
+        if (href && $(href).length) {
+            showSection(href);
+        }
+        /* Bootstrap collapse fires independently via its own handler */
+    });
+
+    /* ============================================================
+       STICKY SIDEBAR
+    ============================================================ */
+    var $sidebar      = $('.category-sidebar');
+    var sidebarColTop = $('.sidebar-column').offset().top;
+
+    $(window).on('scroll', function () {
+        $sidebar.css(
+            $(window).scrollTop() > sidebarColTop - 100
+                ? { position: 'sticky', top: '100px' }
+                : { position: 'static' }
+        );
+    });
+
 });
 </script>
 </body>
