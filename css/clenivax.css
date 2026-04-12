@@ -182,6 +182,26 @@
 }
 
 /* ════════════════════════════════════════════════
+   PRODUCT BLOCK — LUCIDE SVG ICONS
+   ════════════════════════════════════════════════ */
+.what-we-do-block-content i {
+    display: block;
+    margin: 0 auto 10px;
+    width: 52px;
+    height: 52px;
+    line-height: 1;
+}
+.what-we-do-block-content i svg {
+    width: 52px;
+    height: 52px;
+    color: #2563eb;
+    display: block;
+}
+.what-we-do-block:hover .what-we-do-block-content i svg {
+    color: #fff;
+}
+
+/* ════════════════════════════════════════════════
    PRODUCTS — WHAT WE DO BEST
    ════════════════════════════════════════════════ */
 .what-we-do-block-content h5 { color: #111 !important; }
