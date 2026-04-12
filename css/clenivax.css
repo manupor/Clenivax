@@ -301,12 +301,21 @@
     display: flex;
     justify-content: center;
 }
+/* Override shortcodes.css hardcoded values on .banner-left */
+.banner-left,
 .banner-fullwidth {
+    display: block !important;
     padding-top: 0 !important;
     padding-bottom: 0 !important;
+    position: static !important;
     width: 100%;
     max-width: 700px;
+    margin-left: auto !important;
+    margin-right: auto !important;
     text-align: center;
+}
+.banner-left::before {
+    display: none !important;
 }
 
 /* ════════════════════════════════════════════════
