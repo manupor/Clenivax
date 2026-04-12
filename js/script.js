@@ -11,84 +11,75 @@ document.addEventListener('DOMContentLoaded', () => {
     /* ══════════════════════════════════════════════
        SCROLL MICRO-ANIMATIONS
        Uses IntersectionObserver — no extra library.
+       Double RAF ensures browser paints opacity:0
+       before observation starts.
        ══════════════════════════════════════════════ */
 
-    // Helper: add classes to an element
     function prep(el, variant, delay) {
+        if (!el) return;
         el.classList.add('clnvx-anim', variant);
         if (delay) el.classList.add(delay);
     }
 
+    function prepAll(selector, variant, baseDelay) {
+        document.querySelectorAll(selector).forEach((el, i) => {
+            const d = Math.min((baseDelay || 0) + i + 1, 9);
+            prep(el, variant, 'clnvx-d' + d);
+        });
+    }
+
+    // ── Hero text (already visible — no anim) ───
+
     // ── Feature highlight boxes ─────────────────
-    document.querySelectorAll('.message-block').forEach((el, i) => {
-        prep(el, 'clnvx-fade-up', 'clnvx-d' + (i + 1));
-    });
+    prepAll('.message-block', 'clnvx-fade-up');
 
-    // ── About section header + service blocks ───
-    const svcHeader = document.querySelector('.service-section .section-header');
-    if (svcHeader) prep(svcHeader, 'clnvx-fade-up', 'clnvx-d1');
-    document.querySelectorAll('.service-block').forEach((el, i) => {
-        prep(el, 'clnvx-fade-up', 'clnvx-d' + (i + 2));
-    });
-
-    // ── Appointment form ────────────────────────
-    const form = document.querySelector('.appoinment-form');
-    if (form) prep(form, 'clnvx-fade-left', 'clnvx-d2');
+    // ── About section ───────────────────────────
+    prep(document.querySelector('.service-section .section-header'), 'clnvx-fade-up', 'clnvx-d1');
+    prepAll('.service-block', 'clnvx-fade-up', 1);
+    prep(document.querySelector('.appoinment-form'), 'clnvx-fade-right', 'clnvx-d2');
 
     // ── CTA call-out ────────────────────────────
-    const callOut = document.querySelector('.call-out-content');
-    if (callOut) prep(callOut, 'clnvx-zoom-in', 'clnvx-d1');
+    prep(document.querySelector('.call-out'), 'clnvx-zoom-in', 'clnvx-d1');
 
-    // ── Product blocks ──────────────────────────
-    document.querySelectorAll('.what-we-do-block').forEach((el, i) => {
-        const d = (i % 9) + 1;
-        prep(el, 'clnvx-fade-up', 'clnvx-d' + d);
-    });
+    // ── Products section header ──────────────────
+    prep(document.querySelector('.what-we-do-best .section-header'), 'clnvx-fade-up', 'clnvx-d1');
+    prepAll('.what-we-do-block', 'clnvx-fade-up');
 
-    // ── Why Clenivax blocks ─────────────────────
-    const weAreBestHeader = document.querySelector('.we-are-best .section-header');
-    if (weAreBestHeader) prep(weAreBestHeader, 'clnvx-fade-left', 'clnvx-d1');
-    document.querySelectorAll('.we-are-best-block').forEach((el, i) => {
-        prep(el, 'clnvx-fade-left', 'clnvx-d' + (i + 2));
-    });
+    // ── Why Clenivax ─────────────────────────────
+    prep(document.querySelector('.we-are-best .section-header'), 'clnvx-fade-left', 'clnvx-d1');
+    prepAll('.we-are-best-block', 'clnvx-fade-left', 1);
 
-    // ── Accordion panels ────────────────────────
-    const deptHeader = document.querySelector('.departments .section-header');
-    if (deptHeader) prep(deptHeader, 'clnvx-fade-right', 'clnvx-d1');
-    document.querySelectorAll('.departments .panel').forEach((el, i) => {
-        prep(el, 'clnvx-fade-right', 'clnvx-d' + (i + 2));
-    });
+    // ── Accordion ────────────────────────────────
+    prep(document.querySelector('.departments .section-header'), 'clnvx-fade-right', 'clnvx-d1');
+    prepAll('.departments .panel', 'clnvx-fade-right', 1);
 
-    // ── Stats counter ───────────────────────────
-    const happyCust = document.querySelector('.happy-customer');
-    if (happyCust) prep(happyCust, 'clnvx-fade-left', 'clnvx-d1');
-    document.querySelectorAll('.statistics-box').forEach((el, i) => {
-        prep(el, 'clnvx-fade-up', 'clnvx-d' + (i + 2));
-    });
+    // ── Stats ─────────────────────────────────────
+    prep(document.querySelector('.happy-customer'), 'clnvx-fade-left', 'clnvx-d1');
+    prepAll('.statistics-box', 'clnvx-fade-up', 1);
 
-    // ── Footer contact boxes ────────────────────
-    document.querySelectorAll('.contact-details .detail-box').forEach((el, i) => {
-        prep(el, 'clnvx-fade-up', 'clnvx-d' + (i + 1));
-    });
+    // ── Footer ────────────────────────────────────
+    prepAll('.contact-details .detail-box', 'clnvx-fade-up');
+    prepAll('.footer-main .widget', 'clnvx-fade-up');
 
-    // ── Footer widgets ──────────────────────────
-    document.querySelectorAll('.footer-main .widget').forEach((el, i) => {
-        prep(el, 'clnvx-fade-up', 'clnvx-d' + (i + 1));
-    });
-
-    /* ── IntersectionObserver ───────────────────── */
+    /* ── Observer — start AFTER browser paints hidden state ── */
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('is-visible');
-                observer.unobserve(entry.target); // fire once
+                observer.unobserve(entry.target);
             }
         });
     }, {
-        threshold: 0.12,
-        rootMargin: '0px 0px -40px 0px'
+        threshold: 0.1,
+        rootMargin: '0px 0px -30px 0px'
     });
 
-    document.querySelectorAll('.clnvx-anim').forEach(el => observer.observe(el));
+    // Double RAF: ensures 2 paint frames have elapsed so
+    // opacity:0 is actually rendered before we start watching
+    requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+            document.querySelectorAll('.clnvx-anim').forEach(el => observer.observe(el));
+        });
+    });
 
 });

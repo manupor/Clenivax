@@ -282,19 +282,19 @@
 
 /* Base hidden state — applied by JS before observe */
 .clnvx-anim {
-    opacity: 0;
+    opacity: 0 !important;
     will-change: opacity, transform;
-    transition: opacity 0.65s cubic-bezier(.4,0,.2,1),
-                transform 0.65s cubic-bezier(.4,0,.2,1);
+    transition: opacity 0.7s cubic-bezier(.4,0,.2,1),
+                transform 0.7s cubic-bezier(.4,0,.2,1);
 }
 .clnvx-anim.is-visible { opacity: 1 !important; transform: none !important; }
 
 /* Variants */
-.clnvx-fade-up    { transform: translateY(40px); }
-.clnvx-fade-down  { transform: translateY(-30px); }
-.clnvx-fade-left  { transform: translateX(-40px); }
-.clnvx-fade-right { transform: translateX(40px); }
-.clnvx-zoom-in    { transform: scale(0.88); }
+.clnvx-fade-up    { transform: translateY(45px) !important; }
+.clnvx-fade-down  { transform: translateY(-30px) !important; }
+.clnvx-fade-left  { transform: translateX(-45px) !important; }
+.clnvx-fade-right { transform: translateX(45px) !important; }
+.clnvx-zoom-in    { transform: scale(0.86) !important; }
 
 /* Stagger delays */
 .clnvx-d1  { transition-delay: 0.05s; }
