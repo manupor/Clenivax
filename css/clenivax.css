@@ -780,10 +780,37 @@
     text-decoration: none;
 }
 
-/* Clean Sidebar */
+/* ---- Layout row: flexbox so position:sticky works on sidebar ---- */
+.products-layout-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+}
+.products-layout-row > [class*="col-"] {
+    float: none;
+}
+
+/* ---- Sticky sidebar column ---- */
 .sidebar-column {
     padding-right: 20px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 90px;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+    overflow-x: hidden;
 }
+/* Hide scrollbar chrome but keep scrollability */
+.sidebar-column::-webkit-scrollbar { width: 4px; }
+.sidebar-column::-webkit-scrollbar-thumb { background: #d1dae3; border-radius: 2px; }
+
 .category-sidebar {
     background: #fafafa;
     border: 1px solid #e5e5e5;
@@ -870,13 +897,22 @@
     font-weight: 600;
 }
 
-/* Product Category Sections */
+/* Product Category Sections — hidden by default, shown via .active */
 .product-category-section {
+    display: none;
     padding-top: 10px;
-    animation: sectionFadeIn 0.3s ease;
+}
+.product-category-section.active {
+    display: block;
+    -webkit-animation: sectionFadeIn 0.3s ease;
+            animation: sectionFadeIn 0.3s ease;
+}
+@-webkit-keyframes sectionFadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: translateY(0);   }
 }
 @keyframes sectionFadeIn {
-    from { opacity: 0; transform: translateY(8px); }
+    from { opacity: 0; transform: translateY(6px); }
     to   { opacity: 1; transform: translateY(0);   }
 }
 .products-content-area {
