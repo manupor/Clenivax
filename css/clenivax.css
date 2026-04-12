@@ -213,7 +213,7 @@
 .departments .section-header h3:after { background-color: #2563eb !important; }
 .departments .panel-default { background-color: rgba(255,255,255,0.75); border-color: rgba(0,0,0,0.12); }
 .departments .panel-heading { background-color: transparent !important; }
-.departments .panel-heading a { color: #111 !important; }
+.departments .panel-heading a { color: #111 !important; padding-left: 18px !important; }
 .departments .panel-heading a:hover { color: #2563eb !important; }
 .departments .panel-body { background-color: rgba(255,255,255,0.6); }
 .departments .panel-body p { color: #333 !important; }
