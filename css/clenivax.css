@@ -184,11 +184,13 @@
 /* ════════════════════════════════════════════════
    PRODUCTS — WHAT WE DO BEST
    ════════════════════════════════════════════════ */
-.what-we-do-block-content h5 { color: #fff !important; }
-.what-we-do-block-content p  { color: #e0eaff !important; }
+.what-we-do-block-content h5 { color: #111 !important; }
+.what-we-do-block-content p  { color: #333 !important; }
 .what-we-do-block:hover .what-we-do-block-content {
     background-color: rgba(10,31,68,0.88) !important;
 }
+.what-we-do-block:hover .what-we-do-block-content h5,
+.what-we-do-block:hover .what-we-do-block-content p { color: #fff !important; }
 /* Title block */
 .what-we-do-title .what-we-do-block-content h3 { color: #fff !important; }
 .what-we-do-title .what-we-do-block-content p  { color: #c8d8f0 !important; }
