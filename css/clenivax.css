@@ -191,9 +191,9 @@
 }
 .what-we-do-block:hover .what-we-do-block-content h5,
 .what-we-do-block:hover .what-we-do-block-content p { color: #fff !important; }
-/* Title block */
-.what-we-do-title .what-we-do-block-content h3 { color: #fff !important; }
-.what-we-do-title .what-we-do-block-content p  { color: #c8d8f0 !important; }
+/* Title block — dark text on light bg */
+.what-we-do-title .what-we-do-block-content h3 { color: #0a1f44 !important; }
+.what-we-do-title .what-we-do-block-content p  { color: #444 !important; }
 
 /* ════════════════════════════════════════════════
    WHY CLENIVAX — WE ARE BEST (light bg → dark text)
@@ -275,6 +275,42 @@
 .bottom-footer { background-color: #071630 !important; }
 .bottom-footer p, .bottom-footer a { color: #6b8ab8 !important; }
 .bottom-footer a:hover { color: #fff !important; }
+
+/* ════════════════════════════════════════════════
+   SCROLL ANIMATIONS
+   ════════════════════════════════════════════════ */
+
+/* Base hidden state — applied by JS before observe */
+.clnvx-anim {
+    opacity: 0;
+    will-change: opacity, transform;
+    transition: opacity 0.65s cubic-bezier(.4,0,.2,1),
+                transform 0.65s cubic-bezier(.4,0,.2,1);
+}
+.clnvx-anim.is-visible { opacity: 1 !important; transform: none !important; }
+
+/* Variants */
+.clnvx-fade-up    { transform: translateY(40px); }
+.clnvx-fade-down  { transform: translateY(-30px); }
+.clnvx-fade-left  { transform: translateX(-40px); }
+.clnvx-fade-right { transform: translateX(40px); }
+.clnvx-zoom-in    { transform: scale(0.88); }
+
+/* Stagger delays */
+.clnvx-d1  { transition-delay: 0.05s; }
+.clnvx-d2  { transition-delay: 0.12s; }
+.clnvx-d3  { transition-delay: 0.20s; }
+.clnvx-d4  { transition-delay: 0.28s; }
+.clnvx-d5  { transition-delay: 0.36s; }
+.clnvx-d6  { transition-delay: 0.44s; }
+.clnvx-d7  { transition-delay: 0.52s; }
+.clnvx-d8  { transition-delay: 0.60s; }
+.clnvx-d9  { transition-delay: 0.68s; }
+
+/* Respect user preference */
+@media (prefers-reduced-motion: reduce) {
+    .clnvx-anim { transition: none !important; opacity: 1 !important; transform: none !important; }
+}
 
 /* ════════════════════════════════════════════════
    RESPONSIVE — TABLET  (768px – 991px)
