@@ -286,6 +286,8 @@
     flex: 1;
     display: flex;
     align-items: center;
+    padding-top: 90px;
+    padding-bottom: 90px;
 }
 .home-banner .carousel,
 .home-banner .carousel-inner,
