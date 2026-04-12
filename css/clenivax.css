@@ -277,6 +277,173 @@
 .bottom-footer a:hover { color: #fff !important; }
 
 /* ════════════════════════════════════════════════
+   RESPONSIVE — TABLET  (768px – 991px)
+   ════════════════════════════════════════════════ */
+@media (max-width: 991px) {
+
+    /* --- Middle header: stack logo + contacts */
+    .middle-header .logo-block,
+    .middle-header .col-md-9 { float: none !important; text-align: center !important; width: 100%; }
+    .middle-header .location,
+    .middle-header .phone { display: inline-block; margin: 10px 15px 0; }
+
+    /* --- Feature boxes: wrap to 2×2 grid */
+    .message-borad .row { flex-wrap: wrap; }
+    .emargency-case,
+    .opening-hours { width: 100% !important; display: flex !important; }
+
+    /* --- Products: hide left photo, grid full-width */
+    .what-we-do-left { display: none !important; }
+    .what-we-do-right { width: 100% !important; }
+
+    /* --- Why section: stack panels */
+    .we-are-best,
+    .departments { width: 100% !important; float: none !important; }
+    .departments-bg { display: none !important; }
+
+    /* --- Footer contact boxes: 3-col to 1-col */
+    .contact-details .detail-box { width: 100% !important; float: none !important; display: block !important; }
+}
+
+/* ════════════════════════════════════════════════
+   RESPONSIVE — MOBILE  (≤ 767px)
+   ════════════════════════════════════════════════ */
+@media (max-width: 767px) {
+
+    /* --- Global: prevent horizontal overflow */
+    body, .main-container { overflow-x: hidden; }
+    img { max-width: 100%; height: auto; }
+    * { word-break: break-word; }
+
+    /* --- Top header */
+    .top-header .col-md-6 { width: 100%; text-align: center !important; }
+    .top-header ul { justify-content: center; display: flex; flex-wrap: wrap; padding: 0; margin: 0 0 8px; }
+    .top-header ul li { display: inline-block; }
+
+    /* --- Middle header */
+    .middle-header { padding: 15px 0; }
+    .middle-header .logo-block,
+    .middle-header .col-md-9 { float: none !important; text-align: center !important; width: 100%; padding: 0 15px; }
+    .clnvx-logo { font-size: 22px; }
+    .middle-header .location,
+    .middle-header .phone { display: block; margin: 8px 0 0; }
+    .middle-header .location h3,
+    .middle-header .phone h3 { font-size: 16px !important; }
+    .middle-header .location p,
+    .middle-header .phone p { font-size: 12px !important; }
+
+    /* --- Hero */
+    .home-banner { min-height: auto !important; }
+    .home-banner > .container { padding-top: 50px !important; padding-bottom: 30px !important; }
+    .banner-fullwidth,
+    .banner-left { max-width: 100% !important; padding: 0 20px !important; }
+    .banner-left h3 { font-size: 24px !important; letter-spacing: 0 !important; }
+    .banner-left span { font-size: 13px !important; }
+    .banner-left p { font-size: 14px !important; line-height: 1.6; }
+
+    /* --- Feature boxes: RESET our flexbox, stack vertically */
+    .message-borad .row { display: block !important; }
+    .emargency-case,
+    .opening-hours {
+        display: block !important;
+        width: 100% !important;
+        padding: 0 !important;
+    }
+    .message-block {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        float: none !important;
+        padding: 30px 25px !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+    }
+    .message-block:nth-child(2) { padding-left: 25px !important; padding-right: 25px !important; }
+    .message-borad::before { width: 100%; height: 50%; }
+
+    /* --- About / service section */
+    .service-section .service,
+    .service-section .col-md-4 { width: 100% !important; float: none !important; padding: 0 15px; }
+    .service-block { max-width: 100% !important; margin: 20px 0 !important; }
+    .service-block-icon { display: inline-block; vertical-align: middle; margin-right: 12px; }
+    .service-block-content { display: inline-block; vertical-align: middle; max-width: calc(100% - 70px); }
+    .appoinment-form { margin: 30px 0 0 !important; }
+
+    /* --- CTA call-out */
+    .call-out-content .col-md-10,
+    .call-out-content .col-md-2 { width: 100% !important; float: none !important; text-align: center; }
+    .call-out-content h3 { font-size: 20px !important; }
+    .call-out-content .col-md-2 { margin-top: 15px; }
+
+    /* --- Products */
+    .what-we-do-best { display: block !important; }
+    .what-we-do-left { display: none !important; }
+    .what-we-do-right { width: 100% !important; float: none !important; }
+    .what-we-do-right .col-xs-6 { width: 50% !important; }
+    .what-we-do-block-content h5 { font-size: 12px !important; }
+    .what-we-do-block-content p { font-size: 11px !important; line-height: 1.4; }
+
+    /* --- Why Clenivax */
+    .we-are-best,
+    .departments { width: 100% !important; float: none !important; padding: 20px 15px !important; }
+    .departments-bg { display: none !important; }
+    .we-are-best-block { margin-bottom: 20px !important; padding: 15px !important; }
+    .we-are-best-icon { width: 50px !important; height: 50px !important; min-width: 50px; }
+    .we-are-best-content h3 { font-size: 16px !important; }
+    .departments .section-header h3 { font-size: 18px !important; }
+    .departments .panel-heading a { font-size: 13px !important; }
+    .departments .panel-body { padding-left: 15px !important; padding-right: 15px !important; }
+
+    /* --- Counter / Stats */
+    .counter-section .col-md-6 { width: 100% !important; float: none !important; }
+    .happy-customer { padding: 30px 20px !important; margin-bottom: 0 !important; }
+    .happy-customer h3 { font-size: 22px !important; }
+    .counter-app .col-md-6 { width: 50% !important; }
+    .statistics-box { padding: 20px 10px !important; }
+    .statistics-content span { font-size: 26px !important; }
+    .statistics-content p { font-size: 11px !important; }
+
+    /* --- Footer */
+    .contact-details { display: block !important; }
+    .contact-details .detail-box { width: 100% !important; float: none !important; display: block !important; }
+    .footer-main .row .col-md-4,
+    .footer-main .row .col-sm-6 { width: 100% !important; float: none !important; margin-bottom: 30px; }
+    .bottom-footer { text-align: center; padding: 15px !important; }
+    .bottom-footer p { font-size: 12px; }
+
+    /* --- Section headers */
+    .section-header h3 { font-size: 20px !important; }
+    .section-header p { font-size: 14px !important; }
+}
+
+/* ════════════════════════════════════════════════
+   RESPONSIVE — SMALL MOBILE  (≤ 479px)
+   ════════════════════════════════════════════════ */
+@media (max-width: 479px) {
+
+    /* Feature boxes: 1 column */
+    .emargency-case .col-md-6,
+    .opening-hours .col-md-6 { width: 100% !important; float: none !important; }
+
+    /* Products: 1 column */
+    .what-we-do-right .col-xs-6 { width: 100% !important; }
+
+    /* Hero text */
+    .banner-left h3 { font-size: 20px !important; }
+    .home-banner > .container { padding-top: 40px !important; padding-bottom: 25px !important; }
+
+    /* Stats: 1 column */
+    .counter-app .col-md-6 { width: 100% !important; float: none !important; }
+
+    /* Top header: hide social icons on very small */
+    .top-header ul { display: none; }
+    .top-header .col-md-6:last-child > a { font-size: 11px; padding: 5px 10px; }
+
+    /* CTA form selects and inputs */
+    .appoinment-form .form-control { font-size: 14px; }
+}
+
+/* ════════════════════════════════════════════════
    HERO — shorter, full-width, centered text
    ════════════════════════════════════════════════ */
 .home-banner {
