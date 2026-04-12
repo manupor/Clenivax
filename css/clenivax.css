@@ -866,6 +866,30 @@
     border-left-color: #2563eb;
     font-weight: 600;
 }
+
+/* Product Category Sections */
+.product-category-section {
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 2px solid #e8e8e8;
+}
+.category-header {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+.category-header h2 {
+    font-size: 26px;
+    color: #0a1f44;
+    margin: 0 0 12px;
+    font-weight: 700;
+}
+.category-header .category-desc {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 0;
+}
 .medicoswab-products {
     padding: 40px 0 80px;
     background: #fff;
