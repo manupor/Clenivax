@@ -28,6 +28,30 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    /* ── Regulatory Detail Modals ───────────────── */
+    function openModal(id) {
+        const m = document.getElementById(id);
+        if (!m) return;
+        m.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+        m.querySelector('.clnvx-modal-close').focus();
+    }
+    function closeModal(m) {
+        m.classList.remove('is-open');
+        document.body.style.overflow = '';
+    }
+    document.querySelectorAll('.clnvx-modal-btn').forEach(btn => {
+        btn.addEventListener('click', () => openModal(btn.dataset.modal));
+    });
+    document.querySelectorAll('.clnvx-modal-close, .clnvx-modal-overlay').forEach(el => {
+        el.addEventListener('click', () => closeModal(el.closest('.clnvx-modal')));
+    });
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') {
+            document.querySelectorAll('.clnvx-modal.is-open').forEach(closeModal);
+        }
+    });
+
     // ── Hero text (already visible — no anim) ───
 
     // ── Feature highlight boxes ─────────────────
