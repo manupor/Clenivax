@@ -35,32 +35,7 @@
                         <p>Trusted by health care providers around the world.</p>
                     </div>
                     <div class="col-md-6 text-right">
-                        <ul>
-                            <li><a href="#" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="#" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#" title="YouTube"><i class="fa fa-youtube-play"></i></a></li>
-                        </ul>
-                        <a href="#contact" title="Request Information"><span>+</span>Request Information</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="middle-header container-fluid no-padding">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3 logo-block pull-left">
-                        <a href="#" title="Clenivax"><span class="clnvx-logo"><span class="clnvx-plus">+</span>Clenivax&trade;</span></a>
-                    </div>
-                    <div class="col-md-9 text-right pull-right">
-                        <div class="location">
-                            <h3><img src="images/location-ic.png" alt="Location"/> Our Office</h3>
-                            <p>Room 908, 9/F., Qinchengda Building</p>
-                            <p>Xin'an Street, Bao'an District, Shenzhen, Guangdong, P.R. China</p>
-                        </div>
-                        <div class="phone">
-                            <h3><img src="images/phone-ic.png" alt="Phone"/> (+86)755-29455975</h3>
-                            <p>Contact: Mr Allen &bull; Fax: (+86)755-61605135</p>
-                        </div>
+                        <a href="#contact" title="Request Information">Request Information</a>
                     </div>
                 </div>
             </div>
@@ -69,6 +44,9 @@
             <div class="container">
                 <div class="row">
                     <div class="navbar-header">
+                        <a class="navbar-brand" href="#">
+                            <span class="clnvx-logo"><span class="clnvx-plus">+</span>Clenivax&trade;</span>
+                        </a>
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
@@ -78,7 +56,7 @@
                         <ul class="nav navbar-nav">
                             <li class="active"><a href="#">Home</a></li>
                             <li><a href="#about">About</a></li>
-                            <li><a href="products.html" target="_blank" rel="noopener">Products</a></li>
+                            <li><a href="products.html">Products</a></li>
                             <li><a href="#why-us">Why Clenivax</a></li>
                             <li><a href="#contact">Contact</a></li>
                         </ul>
@@ -102,7 +80,7 @@
                                 <span>Advanced Surgical Skin Preparation</span>
                                 <h3>We Protect Your Surgical Field</h3>
                                 <p>Clenivax&trade; delivers powerful, persistent antimicrobial protection backed by 60+ clinical studies and trusted by providers for over 21 years.</p>
-                                <a href="#products">Explore Products <i class="fa fa-plus"></i></a>
+                                <a href="products.html">Explore Products <i class="fa fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -134,7 +112,7 @@
                     <div class="col-md-6 message-block no-right-padding">
                         <h3>100% Sterile System</h3>
                         <p>Patented sterilization technology ensures applicator and solution sterility at point of use every time.</p>
-                        <a href="#products">View Products <i class="fa fa-caret-right"></i></a>
+                        <a href="products.html">View Products <i class="fa fa-caret-right"></i></a>
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-6 opening-hours">
@@ -166,8 +144,7 @@
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <div class="service-block">
                                 <div class="service-block-icon">
-                                    <i><img src="images/ambulance.png" alt="evidence"/></i>
-                                    <i><img src="images/ambulance-white.png" alt="evidence"/></i>
+                                    <i class="fa fa-flask"></i>
                                 </div>
                                 <div class="service-block-content">
                                     <h3>Evidence-Based Formula</h3>
@@ -178,8 +155,7 @@
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <div class="service-block">
                                 <div class="service-block-icon">
-                                    <i><img src="images/heart-ic.png" alt="safety"/></i>
-                                    <i><img src="images/heart-ic-white.png" alt="safety"/></i>
+                                    <i class="fa fa-shield"></i>
                                 </div>
                                 <div class="service-block-content">
                                     <h3>Patient Safety First</h3>
@@ -190,8 +166,7 @@
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <div class="service-block">
                                 <div class="service-block-icon">
-                                    <i><img src="images/appoinment-latter.png" alt="standardized"/></i>
-                                    <i><img src="images/appoinment-latter-white.png" alt="standardized"/></i>
+                                    <i class="fa fa-check-square-o"></i>
                                 </div>
                                 <div class="service-block-content">
                                     <h3>Standardized Process</h3>
@@ -202,8 +177,7 @@
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <div class="service-block">
                                 <div class="service-block-icon">
-                                    <i><img src="images/phone.png" alt="portfolio"/></i>
-                                    <i><img src="images/phone-white.png" alt="portfolio"/></i>
+                                    <i class="fa fa-th-large"></i>
                                 </div>
                                 <div class="service-block-content">
                                     <h3>Complete Portfolio</h3>
@@ -214,19 +188,19 @@
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-12 col-xs-12">
-                    <form class="appoinment-form" id="contact">
+                    <form class="appoinment-form" id="contact" onsubmit="sendToWhatsApp(event)">
                         <h3><img src="images/appoinment.png" alt="request"/> Request Information</h3>
                         <div class="form-group col-md-12 no-padding">
-                            <input type="text" class="form-control" placeholder="Your Name">
+                            <input type="text" class="form-control" id="userName" placeholder="Your Name" required>
                         </div>
                         <div class="form-group col-md-12 no-padding">
-                            <input type="email" class="form-control" placeholder="Email Address">
+                            <input type="email" class="form-control" id="userEmail" placeholder="Email Address" required>
                         </div>
                         <div class="form-group col-md-12 no-padding">
-                            <input type="text" class="form-control" placeholder="Institution / Hospital">
+                            <input type="text" class="form-control" id="userInstitution" placeholder="Institution / Hospital">
                         </div>
                         <div class="form-group col-md-12 no-padding">
-                            <select class="form-control">
+                            <select class="form-control" id="userProduct">
                                 <option>Select a Product</option>
                                 <option>Clenivax&trade; 1mL</option>
                                 <option>Clenivax&trade; Frepp&trade; 1.5mL</option>
@@ -237,11 +211,11 @@
                             </select>
                         </div>
                         <div class="form-group col-md-12 col-sm-12 col-xs-12 no-padding">
-                            <textarea rows="4" class="form-control" placeholder="Your message or questions"></textarea>
+                            <textarea rows="4" class="form-control" id="userMessage" placeholder="Your message or questions"></textarea>
                         </div>
                         <div class="form-group col-md-12 col-sm-12 col-xs-12 no-padding">
                             <button type="submit" class="btn-submit pull-right">
-                                <img src="images/heart-sm.png" alt=""> Submit
+                                <i class="fa fa-whatsapp"></i> Send via WhatsApp
                             </button>
                         </div>
                     </form>
@@ -265,275 +239,6 @@
         </div>
     </div>
 
-    <!-- PRODUCTS - MEDICOSWAB STYLE WITH SIDEBAR -->
-    <div id="products" class="container-fluid no-padding medicoswab-products">
-        <div class="container">
-            <!-- Page Title -->
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="page-title">
-                        <h1>Products</h1>
-                        <p class="breadcrumb"><a href="#">Home</a> &gt; Products</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <!-- Left Sidebar - Product Categories -->
-                <div class="col-md-3 col-sm-4 product-sidebar">
-                    <div class="sidebar-widget">
-                        <h3 class="sidebar-title">Product Categories</h3>
-                        <ul class="category-menu">
-                            <li class="has-submenu">
-                                <a href="#specimen-swabs" class="cat-link">Specimen Collection Swab <i class="fa fa-chevron-right"></i></a>
-                                <ul class="submenu">
-                                    <li><a href="#nasopharyngeal">Nasopharyngeal Swabs</a></li>
-                                    <li><a href="#oropharyngeal">Oropharyngeal Swabs</a></li>
-                                    <li><a href="#gynecological">Gynecological Swabs</a></li>
-                                    <li><a href="#anal">Anal Swabs</a></li>
-                                    <li><a href="#medical-cleaning">Medical Cleaning Swabs</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#cleanroom" class="cat-link">Cleanroom Swabs</a></li>
-                            <li class="has-submenu active">
-                                <a href="#chg-applicators" class="cat-link active">CHG Swab &amp; Applicator <i class="fa fa-chevron-down"></i></a>
-                                <ul class="submenu show">
-                                    <li><a href="#chg-swabs">CHG Swabs</a></li>
-                                    <li class="active"><a href="#chg-applicators">CHG Applicators</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#sampling-kit" class="cat-link">Sampling Kit</a></li>
-                            <li><a href="#vtm-kit" class="cat-link">VTM Kit</a></li>
-                            <li class="has-submenu">
-                                <a href="#saliva-kit" class="cat-link">Saliva Collection Kit <i class="fa fa-chevron-right"></i></a>
-                                <ul class="submenu">
-                                    <li><a href="#dna-kit">DNA Collection Kit</a></li>
-                                    <li><a href="#rna-kit">RNA Collection Kit</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#cervical-brush" class="cat-link">Cervical Cytology Brush</a></li>
-                            <li class="has-submenu">
-                                <a href="#blood-tubes" class="cat-link">Vacuum Blood Collection Tube <i class="fa fa-chevron-right"></i></a>
-                                <ul class="submenu">
-                                    <li><a href="#plasma-tube">Plasma Blood Collection Tube</a></li>
-                                    <li><a href="#whole-blood">Whole Blood Collection Tube</a></li>
-                                    <li><a href="#serum-tube">Serum Blood Collection Tube</a></li>
-                                </ul>
-                            </li>
-                            <li class="has-submenu">
-                                <a href="#transport-medium" class="cat-link">Transport Medium <i class="fa fa-chevron-right"></i></a>
-                                <ul class="submenu">
-                                    <li><a href="#transport-swab">Transport Swab</a></li>
-                                    <li><a href="#virus-medium">Virus Transport Medium</a></li>
-                                    <li><a href="#cell-preservation">Cell Preservation Solution</a></li>
-                                    <li><a href="#normal-saline">Normal Saline</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#sample-containers" class="cat-link">Sample Storage Containers</a></li>
-                            <li><a href="#alcohol-wipes" class="cat-link">Alcohol Wipes</a></li>
-                            <li><a href="#face-mask" class="cat-link">Face Mask</a></li>
-                            <li><a href="#featured" class="cat-link">Featured Products</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Right Content - Product Grid -->
-                <div class="col-md-9 col-sm-8 product-main-content">
-                    <div class="products-list-header">
-                        <h2>CHG Applicators</h2>
-                        <p class="category-desc">Chlorhexidine Gluconate Medical Disinfectant Applicators - MEDICO specialized in medical (chlorhexidine gluconate) CHG applicators, chloraprep applicator. Welcome to buy CHG applicators in stock here and get free sample from our factory.</p>
-                    </div>
-
-                    <!-- Product Grid -->
-                    <div class="products-grid-container">
-                        <div class="row">
-                            
-                            <!-- Product 1: MSA-260 (26ml) -->
-                            <div class="col-md-4 col-sm-6 product-item">
-                                <div class="product-thumb">
-                                    <div class="product-image-wrapper">
-                                        <a href="#product-msa260">
-                                            <img src="images/product-placeholder.jpg" alt="MSA-260 CHG Medical Disinfectant Applicator" onerror="this.src='images/what-we-do-best.jpg'"/>
-                                        </a>
-                                        <span class="product-badge featured">Featured</span>
-                                    </div>
-                                    <div class="product-info">
-                                        <h4 class="product-name">
-                                            <a href="#product-msa260">MSA-260 CHG Medical Disinfectant Applicator with 26.0ML Liquid</a>
-                                        </h4>
-                                        <div class="product-meta">
-                                            <span class="model">Model: MSA-260</span>
-                                            <span class="capacity">26ML Liquid</span>
-                                        </div>
-                                        <p class="product-desc">Preoperative skin disinfection with 2% chlorhexidine gluconate and 70% isopropanol. FDA-standard formulation kills more bacteria than traditional iodophors.</p>
-                                        <div class="product-specs-list">
-                                            <span class="spec-item">2% CHG + 70% IPA</span>
-                                            <span class="spec-item">Polyurethane Foam</span>
-                                            <span class="spec-item">ABS Handle</span>
-                                        </div>
-                                        <a href="#contact" class="btn-enquiry">Enquiry</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Product 2: MSA-105 (10.5ml) -->
-                            <div class="col-md-4 col-sm-6 product-item">
-                                <div class="product-thumb">
-                                    <div class="product-image-wrapper">
-                                        <a href="#product-msa105">
-                                            <img src="images/product-placeholder.jpg" alt="MSA-105 CHG Medical Disinfectant Applicator" onerror="this.src='images/what-we-do-best.jpg'"/>
-                                        </a>
-                                    </div>
-                                    <div class="product-info">
-                                        <h4 class="product-name">
-                                            <a href="#product-msa105">MSA-105 CHG Medical Disinfectant Applicator with 10.5ML Liquid</a>
-                                        </h4>
-                                        <div class="product-meta">
-                                            <span class="model">Model: MSA-105</span>
-                                            <span class="capacity">10.5ML Liquid</span>
-                                        </div>
-                                        <p class="product-desc">Medical grade 100PPI open-cell polyurethane foam with white ABS handle. Ideal for surgical site preparation and catheter maintenance.</p>
-                                        <div class="product-specs-list">
-                                            <span class="spec-item">100PPI Foam</span>
-                                            <span class="spec-item">&ge;48h Activity</span>
-                                            <span class="spec-item">Latex-free</span>
-                                        </div>
-                                        <a href="#contact" class="btn-enquiry">Enquiry</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Product 3: MSA-50 (5.0ml) -->
-                            <div class="col-md-4 col-sm-6 product-item">
-                                <div class="product-thumb">
-                                    <div class="product-image-wrapper">
-                                        <a href="#product-msa50-5ml">
-                                            <img src="images/product-placeholder.jpg" alt="MSA-50 CHG Medical Disinfectant Applicator 5.0ml" onerror="this.src='images/what-we-do-best.jpg'"/>
-                                        </a>
-                                    </div>
-                                    <div class="product-info">
-                                        <h4 class="product-name">
-                                            <a href="#product-msa50-5ml">MSA-50 CHG Medical Disinfectant Applicator with 5.0ml Liquid</a>
-                                        </h4>
-                                        <div class="product-meta">
-                                            <span class="model">Model: MSA-50</span>
-                                            <span class="capacity">5.0ML Liquid</span>
-                                        </div>
-                                        <p class="product-desc">Made of medical grade 100PPI open-cell polyurethane foam. Perfect for pre-injection, IV insertions, dialysis procedures and routine venipunctures.</p>
-                                        <div class="product-specs-list">
-                                            <span class="spec-item">Anti-MRSA</span>
-                                            <span class="spec-item">Anti-VRE</span>
-                                            <span class="spec-item">Anti-CRE</span>
-                                        </div>
-                                        <a href="#contact" class="btn-enquiry">Enquiry</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Product 4: MSA-50 (3.0ml) -->
-                            <div class="col-md-4 col-sm-6 product-item">
-                                <div class="product-thumb">
-                                    <div class="product-image-wrapper">
-                                        <a href="#product-msa50-3ml">
-                                            <img src="images/product-placeholder.jpg" alt="MSA-50 CHG Medical Disinfectant Applicator 3.0ml" onerror="this.src='images/what-we-do-best.jpg'"/>
-                                        </a>
-                                    </div>
-                                    <div class="product-info">
-                                        <h4 class="product-name">
-                                            <a href="#product-msa50-3ml">MSA-50 CHG Medical Disinfectant Applicator with 3.0ml Liquid</a>
-                                        </h4>
-                                        <div class="product-meta">
-                                            <span class="model">Model: MSA-50</span>
-                                            <span class="capacity">3.0ML Liquid</span>
-                                        </div>
-                                        <p class="product-desc">Compact applicator for skin antisepsis preparation. Long-handled plastic rod avoids hand contact with sponge head and patient's skin.</p>
-                                        <div class="product-specs-list">
-                                            <span class="spec-item">Compact Size</span>
-                                            <span class="spec-item">No Activation</span>
-                                            <span class="spec-item">Single-use</span>
-                                        </div>
-                                        <a href="#contact" class="btn-enquiry">Enquiry</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Product 5: MSA-50S (3.0ml) -->
-                            <div class="col-md-4 col-sm-6 product-item">
-                                <div class="product-thumb">
-                                    <div class="product-image-wrapper">
-                                        <a href="#product-msa50s">
-                                            <img src="images/product-placeholder.jpg" alt="MSA-50S CHG Medical Disinfectant Applicator" onerror="this.src='images/what-we-do-best.jpg'"/>
-                                        </a>
-                                    </div>
-                                    <div class="product-info">
-                                        <h4 class="product-name">
-                                            <a href="#product-msa50s">MSA-50S CHG Medical Disinfectant Applicator with 3.0ml Liquid</a>
-                                        </h4>
-                                        <div class="product-meta">
-                                            <span class="model">Model: MSA-50S</span>
-                                            <span class="capacity">3.0ML Liquid</span>
-                                        </div>
-                                        <p class="product-desc">Compact design with 2% CHG and 70% IPA. Ideal for smaller prep areas and pediatric applications. Penetrates first 5 layers of epidermis.</p>
-                                        <div class="product-specs-list">
-                                            <span class="spec-item">Small Size</span>
-                                            <span class="spec-item">Pediatric Use</span>
-                                            <span class="spec-item">Deep Penetration</span>
-                                        </div>
-                                        <a href="#contact" class="btn-enquiry">Enquiry</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Product 6: Chlorhexidine General -->
-                            <div class="col-md-4 col-sm-6 product-item">
-                                <div class="product-thumb">
-                                    <div class="product-image-wrapper">
-                                        <a href="#product-chg-general">
-                                            <img src="images/product-placeholder.jpg" alt="Chlorhexidine Gluconate Medical Disinfectant Applicator" onerror="this.src='images/what-we-do-best.jpg'"/>
-                                        </a>
-                                        <span class="product-badge new">New</span>
-                                    </div>
-                                    <div class="product-info">
-                                        <h4 class="product-name">
-                                            <a href="#product-chg-general">Chlorhexidine Gluconate Medical Disinfectant Applicator</a>
-                                        </h4>
-                                        <div class="product-meta">
-                                            <span class="model">CHG Applicator</span>
-                                            <span class="capacity">Multiple Sizes</span>
-                                        </div>
-                                        <p class="product-desc">Professional medical disinfectant applicator for preoperative skin preparation. Reduces bacteria that could cause skin infections.</p>
-                                        <div class="product-specs-list">
-                                            <span class="spec-item">Broad Spectrum</span>
-                                            <span class="spec-item">Long-lasting</span>
-                                            <span class="spec-item">User-friendly</span>
-                                        </div>
-                                        <a href="#contact" class="btn-enquiry">Enquiry</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <!-- Pagination -->
-                    <div class="pagination-wrapper">
-                        <ul class="pagination">
-                            <li><a href="#" class="active">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
-                            <li><span>...</span></li>
-                            <li><a href="#">10</a></li>
-                            <li><a href="#" class="next">&raquo;</a></li>
-                            <li><a href="#" class="last">Last &raquo;</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- WHY CLENIVAX + CLINICAL SUPPORT -->
     <div id="why-us" class="container-fluid no-padding department-section">
         <div class="we-are-best col-md-6 col-sm-12 no-padding">
@@ -542,21 +247,21 @@
                 <p>Evidence-based protection you can count on &mdash; trusted by healthcare professionals worldwide for over two decades.</p>
             </div>
             <div class="we-are-best-block">
-                <div class="we-are-best-icon"><img src="images/dp-icon-1.png" alt=""/></div>
+                <div class="we-are-best-icon"><i class="fa fa-certificate"></i></div>
                 <div class="we-are-best-content">
                     <h3>Clinically Proven Efficacy</h3>
                     <p>Over 60 peer-reviewed studies confirm efficacy, safety, and persistent antimicrobial action for 7+ days post-application.</p>
                 </div>
             </div>
             <div class="we-are-best-block">
-                <div class="we-are-best-icon"><img src="images/dp-icon-2.png" alt=""/></div>
+                <div class="we-are-best-icon"><i class="fa fa-line-chart"></i></div>
                 <div class="we-are-best-content">
                     <h3>Cost-Effective Standardization</h3>
                     <p>Reduce variability, minimize SSI-related costs, and standardize skin prep protocols across all care settings.</p>
                 </div>
             </div>
             <div class="we-are-best-block">
-                <div class="we-are-best-icon"><img src="images/dp-icon-3.png" alt=""/></div>
+                <div class="we-are-best-icon"><i class="fa fa-globe"></i></div>
                 <div class="we-are-best-content">
                     <h3>Globally Trusted</h3>
                     <p>Nearly 5 billion applicators sold across 38 countries, with 21 years of proven performance in surgical settings.</p>
@@ -571,14 +276,14 @@
                     <div class="panel-heading" role="tab" id="dept-heading1">
                         <h4 class="panel-title">
                             <a role="button" data-toggle="collapse" data-parent="#accordion" href="#dept-type-1" aria-expanded="true">
-                                AORN Guidelines Compliance<i class="fa fa-plus pull-right"></i>
+                                AORN Guidelines Compliance<i class="fa fa-chevron-down pull-right"></i>
                             </a>
                         </h4>
                     </div>
                     <div id="dept-type-1" class="panel-collapse collapse in" role="tabpanel">
                         <div class="panel-body">
                             <p>Clenivax&trade; meets AORN 2025 perioperative skin antisepsis guidelines, which recommend CHG-alcohol products as the preferred preoperative skin prep.</p>
-                            <button type="button" class="clnvx-modal-btn" data-modal="modal-aorn">Details <i class="fa fa-plus"></i></button>
+                            <button type="button" class="clnvx-modal-btn" data-modal="modal-aorn">Details <i class="fa fa-arrow-right"></i></button>
                         </div>
                     </div>
                 </div>
@@ -586,14 +291,14 @@
                     <div class="panel-heading" role="tab" id="dept-heading2">
                         <h4 class="panel-title">
                             <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#dept-type-2">
-                                FDA Clearance &amp; Sterility<i class="fa fa-plus pull-right"></i>
+                                FDA Clearance &amp; Sterility<i class="fa fa-chevron-down pull-right"></i>
                             </a>
                         </h4>
                     </div>
                     <div id="dept-type-2" class="panel-collapse collapse" role="tabpanel">
                         <div class="panel-body">
                             <p>FDA-cleared sterile CHG/alcohol solution. Patented applicator design guarantees sterility at point of use, eliminating cross-contamination risk.</p>
-                            <button type="button" class="clnvx-modal-btn" data-modal="modal-fda">Details <i class="fa fa-plus"></i></button>
+                            <button type="button" class="clnvx-modal-btn" data-modal="modal-fda">Details <i class="fa fa-arrow-right"></i></button>
                         </div>
                     </div>
                 </div>
@@ -601,14 +306,14 @@
                     <div class="panel-heading" role="tab" id="dept-heading3">
                         <h4 class="panel-title">
                             <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#dept-type-3">
-                                SSI Prevention Protocol<i class="fa fa-plus pull-right"></i>
+                                SSI Prevention Protocol<i class="fa fa-chevron-down pull-right"></i>
                             </a>
                         </h4>
                     </div>
                     <div id="dept-type-3" class="panel-collapse collapse" role="tabpanel">
                         <div class="panel-body">
                             <p>CHG-alcohol preparations significantly reduce SSI rates vs. povidone-iodine. Clenivax&trade; is the evidence-based choice for SSI prevention bundles.</p>
-                            <button type="button" class="clnvx-modal-btn" data-modal="modal-ssi">Details <i class="fa fa-plus"></i></button>
+                            <button type="button" class="clnvx-modal-btn" data-modal="modal-ssi">Details <i class="fa fa-arrow-right"></i></button>
                         </div>
                     </div>
                 </div>
@@ -616,14 +321,14 @@
                     <div class="panel-heading" role="tab" id="dept-heading4">
                         <h4 class="panel-title">
                             <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#dept-type-4">
-                                Training &amp; Support Resources<i class="fa fa-plus pull-right"></i>
+                                Training &amp; Support Resources<i class="fa fa-chevron-down pull-right"></i>
                             </a>
                         </h4>
                     </div>
                     <div id="dept-type-4" class="panel-collapse collapse" role="tabpanel">
                         <div class="panel-body">
                             <p>Complete education package: training videos, EIFU, product labels, MSDS documents, and dedicated clinical support available 24/7.</p>
-                            <button type="button" class="clnvx-modal-btn" data-modal="modal-training">Details <i class="fa fa-plus"></i></button>
+                            <button type="button" class="clnvx-modal-btn" data-modal="modal-training">Details <i class="fa fa-arrow-right"></i></button>
                         </div>
                     </div>
                 </div>
@@ -684,78 +389,80 @@
         </div>
     </div>
 
+    <!-- CATALOG DOWNLOAD -->
+    <div class="container-fluid no-padding catalog-download-section">
+        <div class="container">
+            <div class="row catalog-download-inner">
+                <div class="col-md-7 col-sm-7 catalog-text-col">
+                    <span class="catalog-badge">ATRAMAT &middot; Official Export Catalog</span>
+                    <h2>Download Our <span>Product Catalog</span></h2>
+                    <p>Access the complete ATRAMAT export catalog &mdash; full product range, technical specifications, packaging details, and ordering information in a single document.</p>
+                    <ul class="catalog-meta-list">
+                        <li><i class="fa fa-file-pdf-o"></i> PDF Format</li>
+                        <li><i class="fa fa-globe"></i> Export Edition &middot; May 2022</li>
+                        <li><i class="fa fa-download"></i> Free Download</li>
+                    </ul>
+                    <a href="docs/ATRAMAT-Catalogo-Exportacion-may22.pdf" download class="btn-catalog-download">
+                        <i class="fa fa-download"></i> Download Catalog
+                    </a>
+                    <a href="docs/ATRAMAT-Catalogo-Exportacion-may22.pdf" target="_blank" class="btn-catalog-view">
+                        <i class="fa fa-eye"></i> View Online
+                    </a>
+                </div>
+                <div class="col-md-5 col-sm-5 catalog-visual-col">
+                    <div class="catalog-pdf-card">
+                        <div class="catalog-pdf-icon">
+                            <i class="fa fa-file-pdf-o"></i>
+                        </div>
+                        <p class="catalog-pdf-name">ATRAMAT Catálogo<br>Exportación</p>
+                        <span class="catalog-pdf-size">PDF &middot; May 2022</span>
+                        <a href="docs/ATRAMAT-Catalogo-Exportacion-may22.pdf" download class="catalog-pdf-btn">
+                            <i class="fa fa-download"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- FOOTER -->
     <footer class="footer-main container-fluid no-padding">
         <div class="container">
             <div class="contact-details">
-                <div class="col-md-4 col-sm-4 address-box detail-box">
+                <div class="col-md-3 col-sm-3 address-box detail-box">
                     <i><img src="images/ftr-location.png" alt="Location"/></i>
                     <h4>Our Address</h4>
-                    <p>Room 908, 9/F., Qinchengda Building</p>
-                    <p>Xin'an Street, Bao'an District, Shenzhen, Guangdong, P.R. China</p>
+                    <p>Ofibodegas Del Oeste</p>
+                    <p>San Rafael de Alajuela, del puente del Virilla sobre la radial de Santa Ana Belén, 200 metros Norte, 600 metros Oeste. Costa Rica.</p>
                 </div>
-                <div class="col-md-4 col-sm-4 phone-box detail-box">
+                <div class="col-md-3 col-sm-3 phone-box detail-box">
                     <i><img src="images/ftr-phone.png" alt="Phone"/></i>
                     <h4>Contact</h4>
-                    <p>Tel: (+86)755-29455975 &bull; Fax: (+86)755-61605135</p>
-                    <p>Contact Person: Mr Allen</p>
+                    <p>Tel: (+506) 2286-7070</p>
+                    <p>Tel: (+506) 7240-8635</p>
                 </div>
-                <div class="col-md-4 col-sm-4 mail-box detail-box">
+                <div class="col-md-3 col-sm-3 mail-box detail-box">
                     <i><img src="images/ftr-email.png" alt="Email"/></i>
                     <h4>Email Us</h4>
-                    <p><a href="mailto:info@cleanmo.com">info@cleanmo.com</a></p>
-                    <p><a href="mailto:info@cleanmo.com">Sales &amp; Support</a></p>
+                    <p><a href="mailto:info@clenivax.com">info@clenivax.com</a></p>
+                    <p><a href="mailto:info@medicaldcr.com">info@medicaldcr.com</a></p>
+                </div>
+                <div class="col-md-3 col-sm-3 whatsapp-box detail-box">
+                    <i><img src="images/ftr-phone.png" alt="WhatsApp"/></i>
+                    <h4>WhatsApp</h4>
+                    <p><a href="https://wa.me/50672408635" target="_blank" rel="noopener"><i class="fa fa-whatsapp"></i> (+506) 7240-8635</a></p>
+                    <p>Business Inquiries</p>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <aside class="widget widget-about">
+                <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
+                    <aside class="widget widget-about" style="text-align: center;">
                         <h3><span class="clnvx-logo clnvx-logo-ftr"><span class="clnvx-plus">+</span>Clenivax&trade;</span></h3>
                         <p>Leading innovation in surgical skin preparation. Trusted by healthcare professionals worldwide for over 21 years.</p>
                         <div class="time-schedule">
                             <p>Monday &ndash; Friday <span>8:00 &ndash; 18:00</span></p>
                             <p>Saturday <span>8:00 &ndash; 14:00</span></p>
                             <p>Sunday <span>Closed</span></p>
-                        </div>
-                    </aside>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <aside class="widget widget-links">
-                        <h3 class="widget-title">Products &amp; Resources</h3>
-                        <ul>
-                            <li><a href="#">1mL Applicator</a></li>
-                            <li><a href="#">Frepp&trade; 1.5mL</a></li>
-                            <li><a href="#">3mL Applicator</a></li>
-                            <li><a href="#">10.5mL Applicator</a></li>
-                            <li><a href="#">26mL Applicator</a></li>
-                            <li><a href="#">Clenivax&trade; Clear</a></li>
-                            <li><a href="#">Clinical Studies</a></li>
-                            <li><a href="#">Training Videos</a></li>
-                            <li><a href="#">Product Labels</a></li>
-                            <li><a href="#">MSDS Documents</a></li>
-                            <li><a href="#">EIFU</a></li>
-                            <li><a href="#">FAQs</a></li>
-                        </ul>
-                    </aside>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <aside class="widget widget-newsletter">
-                        <h3 class="widget-title">Stay Informed</h3>
-                        <p>Subscribe for clinical updates, new product launches, and healthcare guidelines.</p>
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Email Address">
-                            <span class="input-group-btn">
-                                <button class="btn btn-default" type="button"><i class="fa fa-send-o"></i></button>
-                            </span>
-                        </div>
-                        <div class="social">
-                            <h6>Stay Connected</h6>
-                            <ul>
-                                <li><a href="#" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#" title="YouTube"><i class="fa fa-youtube-play"></i></a></li>
-                                <li><a href="#" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                            </ul>
                         </div>
                     </aside>
                 </div>
@@ -767,6 +474,11 @@
     </footer>
 
 </div>
+
+<!-- FLOATING WHATSAPP BUTTON -->
+<a href="https://wa.me/50672408635" class="whatsapp-float" target="_blank" rel="noopener" title="Contact us on WhatsApp">
+    <i class="fa fa-whatsapp"></i>
+</a>
 
 <!-- ══════════════════════════════════════════════
      REGULATORY DETAIL MODALS
@@ -923,5 +635,51 @@
 <script src="libraries/number/jquery.animateNumber.min.js"></script>
 <script src="js/script.js"></script>
 <script src="js/functions.js"></script>
+
+<script>
+function sendToWhatsApp(event) {
+    event.preventDefault();
+    
+    const name = document.getElementById('userName').value;
+    const email = document.getElementById('userEmail').value;
+    const institution = document.getElementById('userInstitution').value;
+    const product = document.getElementById('userProduct').value;
+    const message = document.getElementById('userMessage').value;
+    
+    let whatsappMessage = `*New Information Request*\n\n`;
+    whatsappMessage += `*Name:* ${name}\n`;
+    whatsappMessage += `*Email:* ${email}\n`;
+    
+    if (institution) {
+        whatsappMessage += `*Institution:* ${institution}\n`;
+    }
+    
+    if (product && product !== 'Select a Product') {
+        whatsappMessage += `*Product:* ${product}\n`;
+    }
+    
+    if (message) {
+        whatsappMessage += `\n*Message:*\n${message}`;
+    }
+    
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    const whatsappURL = `https://wa.me/50672408635?text=${encodedMessage}`;
+    
+    window.open(whatsappURL, '_blank');
+    
+    return false;
+}
+
+// Sticky navbar scroll effect
+window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.ow-navigation');
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+</script>
+
 </body>
 </html>

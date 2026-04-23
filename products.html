@@ -35,32 +35,7 @@
                         <p>Trusted by health care providers around the world.</p>
                     </div>
                     <div class="col-md-6 text-right">
-                        <ul>
-                            <li><a href="#" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="#" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#" title="YouTube"><i class="fa fa-youtube-play"></i></a></li>
-                        </ul>
-                        <a href="#contact" title="Request Information"><span>+</span>Request Information</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="middle-header container-fluid no-padding">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3 logo-block pull-left">
-                        <a href="index.html" title="Clenivax"><span class="clnvx-logo"><span class="clnvx-plus">+</span>Clenivax&trade;</span></a>
-                    </div>
-                    <div class="col-md-9 text-right pull-right">
-                        <div class="location">
-                            <h3><img src="images/location-ic.png" alt="Location"/> Our Office</h3>
-                            <p>Room 908, 9/F., Qinchengda Building</p>
-                            <p>Xin'an Street, Bao'an District, Shenzhen, Guangdong, P.R. China</p>
-                        </div>
-                        <div class="phone">
-                            <h3><img src="images/phone-ic.png" alt="Phone"/> (+86)755-29455975</h3>
-                            <p>Contact: Mr Allen &bull; Fax: (+86)755-61605135</p>
-                        </div>
+                        <a href="index.html#contact" title="Request Information"><span>+</span>Request Information</a>
                     </div>
                 </div>
             </div>
@@ -69,6 +44,9 @@
             <div class="container">
                 <div class="row">
                     <div class="navbar-header">
+                        <a class="navbar-brand" href="index.html">
+                            <span class="clnvx-logo"><span class="clnvx-plus">+</span>Clenivax&trade;</span>
+                        </a>
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
@@ -163,7 +141,18 @@
                             <li class="cat-parent">
                                 <a class="cat-link" href="#cat-alcohol">Alcohol Wipes</a>
                             </li>
+                            <li class="cat-parent">
+                                <a class="cat-link has-sub" href="#cat-qbd" aria-expanded="false">QBD PHARMA <i class="fa fa-chevron-right"></i></a>
+                                <ul class="sub-cat" id="sub-qbd" style="display:none">
+                                    <li><a href="#cat-qbd">QBD Products</a></li>
+                                </ul>
+                            </li>
                         </ul>
+                        <div class="sidebar-catalog-btn">
+                            <a href="docs/ATRAMAT-Catalogo-Exportacion-may22.pdf" download>
+                                <i class="fa fa-file-pdf-o"></i> Download Catalog
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -205,7 +194,7 @@
                                         <span class="tag">Medical Grade</span>
                                         <span class="tag">Polyurethane Foam</span>
                                     </div>
-                                    <a href="#contact" class="btn-enquiry">Enquiry</a>
+                                    <button onclick="productEnquiry(this.closest('.product-info-box, .product-card-wrap').querySelector('.product-title a, h4 a').textContent.trim())" class="btn-enquiry">Enquiry</button>
                                 </div>
                             </div>
                         </div>
@@ -236,7 +225,7 @@
                                         <span class="tag">Latex-free</span>
                                         <span class="tag">48h Activity</span>
                                     </div>
-                                    <a href="#contact" class="btn-enquiry">Enquiry</a>
+                                    <button onclick="productEnquiry(this.closest('.product-info-box, .product-card-wrap').querySelector('.product-title a, h4 a').textContent.trim())" class="btn-enquiry">Enquiry</button>
                                 </div>
                             </div>
                         </div>
@@ -267,7 +256,7 @@
                                         <span class="tag">IV Insertion</span>
                                         <span class="tag">Single-use</span>
                                     </div>
-                                    <a href="#contact" class="btn-enquiry">Enquiry</a>
+                                    <button onclick="productEnquiry(this.closest('.product-info-box, .product-card-wrap').querySelector('.product-title a, h4 a').textContent.trim())" class="btn-enquiry">Enquiry</button>
                                 </div>
                             </div>
                         </div>
@@ -298,7 +287,7 @@
                                         <span class="tag">Aseptic</span>
                                         <span class="tag">Easy Use</span>
                                     </div>
-                                    <a href="#contact" class="btn-enquiry">Enquiry</a>
+                                    <button onclick="productEnquiry(this.closest('.product-info-box, .product-card-wrap').querySelector('.product-title a, h4 a').textContent.trim())" class="btn-enquiry">Enquiry</button>
                                 </div>
                             </div>
                         </div>
@@ -329,7 +318,7 @@
                                         <span class="tag">Pediatric</span>
                                         <span class="tag">Deep Clean</span>
                                     </div>
-                                    <a href="#contact" class="btn-enquiry">Enquiry</a>
+                                    <button onclick="productEnquiry(this.closest('.product-info-box, .product-card-wrap').querySelector('.product-title a, h4 a').textContent.trim())" class="btn-enquiry">Enquiry</button>
                                 </div>
                             </div>
                         </div>
@@ -361,7 +350,7 @@
                                         <span class="tag">Preoperative</span>
                                         <span class="tag">Antiseptic</span>
                                     </div>
-                                    <a href="#contact" class="btn-enquiry">Enquiry</a>
+                                    <button onclick="productEnquiry(this.closest('.product-info-box, .product-card-wrap').querySelector('.product-title a, h4 a').textContent.trim())" class="btn-enquiry">Enquiry</button>
                                 </div>
                             </div>
                         </div>
@@ -404,7 +393,7 @@
                                             <span class="tag">COVID-19</span>
                                             <span class="tag">Break-point</span>
                                         </div>
-                                        <a href="#contact" class="btn-enquiry">Enquiry</a>
+                                        <button onclick="productEnquiry(this.closest('.product-info-box, .product-card-wrap').querySelector('.product-title a, h4 a').textContent.trim())" class="btn-enquiry">Enquiry</button>
                                     </div>
                                 </div>
                             </div>
@@ -434,7 +423,7 @@
                                             <span class="tag">Flocked</span>
                                             <span class="tag">Sterile</span>
                                         </div>
-                                        <a href="#contact" class="btn-enquiry">Enquiry</a>
+                                        <button onclick="productEnquiry(this.closest('.product-info-box, .product-card-wrap').querySelector('.product-title a, h4 a').textContent.trim())" class="btn-enquiry">Enquiry</button>
                                     </div>
                                 </div>
                             </div>
@@ -465,7 +454,7 @@
                                             <span class="tag">Short Handle</span>
                                             <span class="tag">Comfort</span>
                                         </div>
-                                        <a href="#contact" class="btn-enquiry">Enquiry</a>
+                                        <button onclick="productEnquiry(this.closest('.product-info-box, .product-card-wrap').querySelector('.product-title a, h4 a').textContent.trim())" class="btn-enquiry">Enquiry</button>
                                     </div>
                                 </div>
                             </div>
@@ -506,7 +495,7 @@
                                             <span class="tag">Safe Transport</span>
                                             <span class="tag">COVID-19</span>
                                         </div>
-                                        <a href="#contact" class="btn-enquiry">Enquiry</a>
+                                        <button onclick="productEnquiry(this.closest('.product-info-box, .product-card-wrap').querySelector('.product-title a, h4 a').textContent.trim())" class="btn-enquiry">Enquiry</button>
                                     </div>
                                 </div>
                             </div>
@@ -536,7 +525,7 @@
                                             <span class="tag">Culture Ready</span>
                                             <span class="tag">Classical</span>
                                         </div>
-                                        <a href="#contact" class="btn-enquiry">Enquiry</a>
+                                        <button onclick="productEnquiry(this.closest('.product-info-box, .product-card-wrap').querySelector('.product-title a, h4 a').textContent.trim())" class="btn-enquiry">Enquiry</button>
                                     </div>
                                 </div>
                             </div>
@@ -566,7 +555,7 @@
                                             <span class="tag">Transport</span>
                                             <span class="tag">Leak-proof</span>
                                         </div>
-                                        <a href="#contact" class="btn-enquiry">Enquiry</a>
+                                        <button onclick="productEnquiry(this.closest('.product-info-box, .product-card-wrap').querySelector('.product-title a, h4 a').textContent.trim())" class="btn-enquiry">Enquiry</button>
                                     </div>
                                 </div>
                             </div>
@@ -607,7 +596,7 @@
                                             <span class="tag">RNA</span>
                                             <span class="tag">Genetic Testing</span>
                                         </div>
-                                        <a href="#contact" class="btn-enquiry">Enquiry</a>
+                                        <button onclick="productEnquiry(this.closest('.product-info-box, .product-card-wrap').querySelector('.product-title a, h4 a').textContent.trim())" class="btn-enquiry">Enquiry</button>
                                     </div>
                                 </div>
                             </div>
@@ -637,7 +626,7 @@
                                             <span class="tag">Genetics</span>
                                             <span class="tag">Research</span>
                                         </div>
-                                        <a href="#contact" class="btn-enquiry">Enquiry</a>
+                                        <button onclick="productEnquiry(this.closest('.product-info-box, .product-card-wrap').querySelector('.product-title a, h4 a').textContent.trim())" class="btn-enquiry">Enquiry</button>
                                     </div>
                                 </div>
                             </div>
@@ -668,7 +657,7 @@
                                             <span class="tag">Diagnostics</span>
                                             <span class="tag">Research</span>
                                         </div>
-                                        <a href="#contact" class="btn-enquiry">Enquiry</a>
+                                        <button onclick="productEnquiry(this.closest('.product-info-box, .product-card-wrap').querySelector('.product-title a, h4 a').textContent.trim())" class="btn-enquiry">Enquiry</button>
                                     </div>
                                 </div>
                             </div>
@@ -709,7 +698,7 @@
                                             <span class="tag">HPV Test</span>
                                             <span class="tag">Sterile</span>
                                         </div>
-                                        <a href="#contact" class="btn-enquiry">Enquiry</a>
+                                        <button onclick="productEnquiry(this.closest('.product-info-box, .product-card-wrap').querySelector('.product-title a, h4 a').textContent.trim())" class="btn-enquiry">Enquiry</button>
                                     </div>
                                 </div>
                             </div>
@@ -739,7 +728,7 @@
                                             <span class="tag">Cell Collection</span>
                                             <span class="tag">Gynecology</span>
                                         </div>
-                                        <a href="#contact" class="btn-enquiry">Enquiry</a>
+                                        <button onclick="productEnquiry(this.closest('.product-info-box, .product-card-wrap').querySelector('.product-title a, h4 a').textContent.trim())" class="btn-enquiry">Enquiry</button>
                                     </div>
                                 </div>
                             </div>
@@ -780,7 +769,7 @@
                                             <span class="tag">TCT</span>
                                             <span class="tag">Cytology</span>
                                         </div>
-                                        <a href="#contact" class="btn-enquiry">Enquiry</a>
+                                        <button onclick="productEnquiry(this.closest('.product-info-box, .product-card-wrap').querySelector('.product-title a, h4 a').textContent.trim())" class="btn-enquiry">Enquiry</button>
                                     </div>
                                 </div>
                             </div>
@@ -810,7 +799,7 @@
                                             <span class="tag">Molecular</span>
                                             <span class="tag">Diagnostic</span>
                                         </div>
-                                        <a href="#contact" class="btn-enquiry">Enquiry</a>
+                                        <button onclick="productEnquiry(this.closest('.product-info-box, .product-card-wrap').querySelector('.product-title a, h4 a').textContent.trim())" class="btn-enquiry">Enquiry</button>
                                     </div>
                                 </div>
                             </div>
@@ -841,7 +830,7 @@
                                             <span class="tag">Long-term</span>
                                             <span class="tag">Universal</span>
                                         </div>
-                                        <a href="#contact" class="btn-enquiry">Enquiry</a>
+                                        <button onclick="productEnquiry(this.closest('.product-info-box, .product-card-wrap').querySelector('.product-title a, h4 a').textContent.trim())" class="btn-enquiry">Enquiry</button>
                                     </div>
                                 </div>
                             </div>
@@ -882,7 +871,7 @@
                                             <span class="tag">Cleanroom</span>
                                             <span class="tag">Electronics</span>
                                         </div>
-                                        <a href="#contact" class="btn-enquiry">Enquiry</a>
+                                        <button onclick="productEnquiry(this.closest('.product-info-box, .product-card-wrap').querySelector('.product-title a, h4 a').textContent.trim())" class="btn-enquiry">Enquiry</button>
                                     </div>
                                 </div>
                             </div>
@@ -912,7 +901,7 @@
                                             <span class="tag">Semiconductor</span>
                                             <span class="tag">Critical</span>
                                         </div>
-                                        <a href="#contact" class="btn-enquiry">Enquiry</a>
+                                        <button onclick="productEnquiry(this.closest('.product-info-box, .product-card-wrap').querySelector('.product-title a, h4 a').textContent.trim())" class="btn-enquiry">Enquiry</button>
                                     </div>
                                 </div>
                             </div>
@@ -943,7 +932,7 @@
                                             <span class="tag">Industrial</span>
                                             <span class="tag">Absorbent</span>
                                         </div>
-                                        <a href="#contact" class="btn-enquiry">Enquiry</a>
+                                        <button onclick="productEnquiry(this.closest('.product-info-box, .product-card-wrap').querySelector('.product-title a, h4 a').textContent.trim())" class="btn-enquiry">Enquiry</button>
                                     </div>
                                 </div>
                             </div>
@@ -984,7 +973,7 @@
                                             <span class="tag">Culture</span>
                                             <span class="tag">Molecular</span>
                                         </div>
-                                        <a href="#contact" class="btn-enquiry">Enquiry</a>
+                                        <button onclick="productEnquiry(this.closest('.product-info-box, .product-card-wrap').querySelector('.product-title a, h4 a').textContent.trim())" class="btn-enquiry">Enquiry</button>
                                     </div>
                                 </div>
                             </div>
@@ -1014,7 +1003,7 @@
                                             <span class="tag">Pregnancy</span>
                                             <span class="tag">Screening</span>
                                         </div>
-                                        <a href="#contact" class="btn-enquiry">Enquiry</a>
+                                        <button onclick="productEnquiry(this.closest('.product-info-box, .product-card-wrap').querySelector('.product-title a, h4 a').textContent.trim())" class="btn-enquiry">Enquiry</button>
                                     </div>
                                 </div>
                             </div>
@@ -1045,7 +1034,7 @@
                                             <span class="tag">Legal</span>
                                             <span class="tag">Buccal</span>
                                         </div>
-                                        <a href="#contact" class="btn-enquiry">Enquiry</a>
+                                        <button onclick="productEnquiry(this.closest('.product-info-box, .product-card-wrap').querySelector('.product-title a, h4 a').textContent.trim())" class="btn-enquiry">Enquiry</button>
                                     </div>
                                 </div>
                             </div>
@@ -1086,7 +1075,7 @@
                                             <span class="tag">Bacteria</span>
                                             <span class="tag">Semi-solid</span>
                                         </div>
-                                        <a href="#contact" class="btn-enquiry">Enquiry</a>
+                                        <button onclick="productEnquiry(this.closest('.product-info-box, .product-card-wrap').querySelector('.product-title a, h4 a').textContent.trim())" class="btn-enquiry">Enquiry</button>
                                     </div>
                                 </div>
                             </div>
@@ -1116,7 +1105,7 @@
                                             <span class="tag">Stool</span>
                                             <span class="tag">Buffered</span>
                                         </div>
-                                        <a href="#contact" class="btn-enquiry">Enquiry</a>
+                                        <button onclick="productEnquiry(this.closest('.product-info-box, .product-card-wrap').querySelector('.product-title a, h4 a').textContent.trim())" class="btn-enquiry">Enquiry</button>
                                     </div>
                                 </div>
                             </div>
@@ -1147,7 +1136,7 @@
                                             <span class="tag">Sterile</span>
                                             <span class="tag">Irrigation</span>
                                         </div>
-                                        <a href="#contact" class="btn-enquiry">Enquiry</a>
+                                        <button onclick="productEnquiry(this.closest('.product-info-box, .product-card-wrap').querySelector('.product-title a, h4 a').textContent.trim())" class="btn-enquiry">Enquiry</button>
                                     </div>
                                 </div>
                             </div>
@@ -1188,7 +1177,7 @@
                                             <span class="tag">Chemistry</span>
                                             <span class="tag">Clot Activator</span>
                                         </div>
-                                        <a href="#contact" class="btn-enquiry">Enquiry</a>
+                                        <button onclick="productEnquiry(this.closest('.product-info-box, .product-card-wrap').querySelector('.product-title a, h4 a').textContent.trim())" class="btn-enquiry">Enquiry</button>
                                     </div>
                                 </div>
                             </div>
@@ -1218,7 +1207,7 @@
                                             <span class="tag">Hematology</span>
                                             <span class="tag">CBC</span>
                                         </div>
-                                        <a href="#contact" class="btn-enquiry">Enquiry</a>
+                                        <button onclick="productEnquiry(this.closest('.product-info-box, .product-card-wrap').querySelector('.product-title a, h4 a').textContent.trim())" class="btn-enquiry">Enquiry</button>
                                     </div>
                                 </div>
                             </div>
@@ -1249,7 +1238,7 @@
                                             <span class="tag">Plasma</span>
                                             <span class="tag">Chemistry</span>
                                         </div>
-                                        <a href="#contact" class="btn-enquiry">Enquiry</a>
+                                        <button onclick="productEnquiry(this.closest('.product-info-box, .product-card-wrap').querySelector('.product-title a, h4 a').textContent.trim())" class="btn-enquiry">Enquiry</button>
                                     </div>
                                 </div>
                             </div>
@@ -1290,7 +1279,7 @@
                                             <span class="tag">Strep A</span>
                                             <span class="tag">Culture</span>
                                         </div>
-                                        <a href="#contact" class="btn-enquiry">Enquiry</a>
+                                        <button onclick="productEnquiry(this.closest('.product-info-box, .product-card-wrap').querySelector('.product-title a, h4 a').textContent.trim())" class="btn-enquiry">Enquiry</button>
                                     </div>
                                 </div>
                             </div>
@@ -1320,7 +1309,7 @@
                                             <span class="tag">Viral</span>
                                             <span class="tag">Molecular</span>
                                         </div>
-                                        <a href="#contact" class="btn-enquiry">Enquiry</a>
+                                        <button onclick="productEnquiry(this.closest('.product-info-box, .product-card-wrap').querySelector('.product-title a, h4 a').textContent.trim())" class="btn-enquiry">Enquiry</button>
                                     </div>
                                 </div>
                             </div>
@@ -1351,7 +1340,7 @@
                                             <span class="tag">Examination</span>
                                             <span class="tag">Convenient</span>
                                         </div>
-                                        <a href="#contact" class="btn-enquiry">Enquiry</a>
+                                        <button onclick="productEnquiry(this.closest('.product-info-box, .product-card-wrap').querySelector('.product-title a, h4 a').textContent.trim())" class="btn-enquiry">Enquiry</button>
                                     </div>
                                 </div>
                             </div>
@@ -1392,7 +1381,7 @@
                                             <span class="tag">STI</span>
                                             <span class="tag">Culture</span>
                                         </div>
-                                        <a href="#contact" class="btn-enquiry">Enquiry</a>
+                                        <button onclick="productEnquiry(this.closest('.product-info-box, .product-card-wrap').querySelector('.product-title a, h4 a').textContent.trim())" class="btn-enquiry">Enquiry</button>
                                     </div>
                                 </div>
                             </div>
@@ -1422,7 +1411,7 @@
                                             <span class="tag">HPV</span>
                                             <span class="tag">Cytology</span>
                                         </div>
-                                        <a href="#contact" class="btn-enquiry">Enquiry</a>
+                                        <button onclick="productEnquiry(this.closest('.product-info-box, .product-card-wrap').querySelector('.product-title a, h4 a').textContent.trim())" class="btn-enquiry">Enquiry</button>
                                     </div>
                                 </div>
                             </div>
@@ -1453,7 +1442,7 @@
                                             <span class="tag">Home Kit</span>
                                             <span class="tag">Convenient</span>
                                         </div>
-                                        <a href="#contact" class="btn-enquiry">Enquiry</a>
+                                        <button onclick="productEnquiry(this.closest('.product-info-box, .product-card-wrap').querySelector('.product-title a, h4 a').textContent.trim())" class="btn-enquiry">Enquiry</button>
                                     </div>
                                 </div>
                             </div>
@@ -1494,7 +1483,7 @@
                                             <span class="tag">Enteric</span>
                                             <span class="tag">Culture</span>
                                         </div>
-                                        <a href="#contact" class="btn-enquiry">Enquiry</a>
+                                        <button onclick="productEnquiry(this.closest('.product-info-box, .product-card-wrap').querySelector('.product-title a, h4 a').textContent.trim())" class="btn-enquiry">Enquiry</button>
                                     </div>
                                 </div>
                             </div>
@@ -1524,7 +1513,7 @@
                                             <span class="tag">Pediatric</span>
                                             <span class="tag">Convenient</span>
                                         </div>
-                                        <a href="#contact" class="btn-enquiry">Enquiry</a>
+                                        <button onclick="productEnquiry(this.closest('.product-info-box, .product-card-wrap').querySelector('.product-title a, h4 a').textContent.trim())" class="btn-enquiry">Enquiry</button>
                                     </div>
                                 </div>
                             </div>
@@ -1555,7 +1544,7 @@
                                             <span class="tag">Colorectal</span>
                                             <span class="tag">Screening</span>
                                         </div>
-                                        <a href="#contact" class="btn-enquiry">Enquiry</a>
+                                        <button onclick="productEnquiry(this.closest('.product-info-box, .product-card-wrap').querySelector('.product-title a, h4 a').textContent.trim())" class="btn-enquiry">Enquiry</button>
                                     </div>
                                 </div>
                             </div>
@@ -1596,7 +1585,7 @@
                                             <span class="tag">Sterile</span>
                                             <span class="tag">Prep Pad</span>
                                         </div>
-                                        <a href="#contact" class="btn-enquiry">Enquiry</a>
+                                        <button onclick="productEnquiry(this.closest('.product-info-box, .product-card-wrap').querySelector('.product-title a, h4 a').textContent.trim())" class="btn-enquiry">Enquiry</button>
                                     </div>
                                 </div>
                             </div>
@@ -1626,7 +1615,7 @@
                                             <span class="tag">Canister</span>
                                             <span class="tag">Equipment</span>
                                         </div>
-                                        <a href="#contact" class="btn-enquiry">Enquiry</a>
+                                        <button onclick="productEnquiry(this.closest('.product-info-box, .product-card-wrap').querySelector('.product-title a, h4 a').textContent.trim())" class="btn-enquiry">Enquiry</button>
                                     </div>
                                 </div>
                             </div>
@@ -1657,7 +1646,48 @@
                                             <span class="tag">Surgical</span>
                                             <span class="tag">Persistent</span>
                                         </div>
-                                        <a href="#contact" class="btn-enquiry">Enquiry</a>
+                                        <button onclick="productEnquiry(this.closest('.product-info-box, .product-card-wrap').querySelector('.product-title a, h4 a').textContent.trim())" class="btn-enquiry">Enquiry</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- QBD PHARMA SECTION -->
+                    <div id="cat-qbd" class="product-category-section" style="display:none">
+                        <div class="category-header">
+                            <h2>QBD PHARMA Products</h2>
+                            <p class="category-desc">Quality By Design pharmaceutical products. Explore our complete line of QBD PHARMA medical and pharmaceutical supplies. Visit <a href="https://www.qbdpharm.com/product" target="_blank" rel="noopener">www.qbdpharm.com/product</a> for the full catalog.</p>
+                        </div>
+                        <div class="products-grid-row row">
+                            <!-- Product 1 -->
+                            <div class="col-md-4 col-sm-6 product-card-item">
+                                <div class="product-card-wrap">
+                                    <div class="product-img-box">
+                                        <a href="https://www.qbdpharm.com/product" target="_blank" rel="noopener">
+                                            <img src="images/CHG-Applicators-.jpg" alt="QBD PHARMA Products" onerror="this.src='images/what-we-do-best-block-bg.jpg'">
+                                        </a>
+                                        <span class="badge-featured">New Partner</span>
+                                    </div>
+                                    <div class="product-info-box">
+                                        <h4 class="product-title">
+                                            <a href="https://www.qbdpharm.com/product" target="_blank" rel="noopener">QBD PHARMA Medical Products</a>
+                                        </h4>
+                                        <div class="product-attributes">
+                                            <span class="attr-label">Type:</span> Pharmaceutical & Medical
+                                        </div>
+                                        <div class="product-attributes">
+                                            <span class="attr-label">Quality:</span> QBD Certified
+                                        </div>
+                                        <div class="product-desc-short">
+                                            Quality By Design pharmaceutical products including medical supplies, laboratory equipment, and healthcare solutions. ISO certified manufacturing.
+                                        </div>
+                                        <div class="product-tags">
+                                            <span class="tag">Pharma</span>
+                                            <span class="tag">QBD</span>
+                                            <span class="tag">ISO</span>
+                                        </div>
+                                        <a href="https://www.qbdpharm.com/product" target="_blank" rel="noopener" class="btn-enquiry">View Catalog</a>
                                     </div>
                                 </div>
                             </div>
@@ -1673,69 +1703,40 @@
     <footer class="footer-main container-fluid no-padding">
         <div class="container">
             <div class="contact-details">
-                <div class="col-md-4 col-sm-4 address-box detail-box">
+                <div class="col-md-3 col-sm-3 address-box detail-box">
                     <i><img src="images/ftr-location.png" alt="Location"/></i>
                     <h4>Our Address</h4>
-                    <p>Room 908, 9/F., Qinchengda Building</p>
-                    <p>Xin'an Street, Bao'an District, Shenzhen, Guangdong, P.R. China</p>
+                    <p>Ofibodegas Del Oeste</p>
+                    <p>San Rafael de Alajuela, del puente del Virilla sobre la radial de Santa Ana Belén, 200 metros Norte, 600 metros Oeste. Costa Rica.</p>
                 </div>
-                <div class="col-md-4 col-sm-4 phone-box detail-box">
+                <div class="col-md-3 col-sm-3 phone-box detail-box">
                     <i><img src="images/ftr-phone.png" alt="Phone"/></i>
                     <h4>Contact</h4>
-                    <p>Tel: (+86)755-29455975 &bull; Fax: (+86)755-61605135</p>
-                    <p>Contact Person: Mr Allen</p>
+                    <p>Tel: (+506) 2286-7070</p>
+                    <p>Tel: (+506) 7240-8635</p>
                 </div>
-                <div class="col-md-4 col-sm-4 mail-box detail-box">
+                <div class="col-md-3 col-sm-3 mail-box detail-box">
                     <i><img src="images/ftr-email.png" alt="Email"/></i>
                     <h4>Email Us</h4>
-                    <p><a href="mailto:info@cleanmo.com">info@cleanmo.com</a></p>
-                    <p><a href="mailto:info@cleanmo.com">Sales &amp; Support</a></p>
+                    <p><a href="mailto:info@clenivax.com">info@clenivax.com</a></p>
+                    <p><a href="mailto:info@medicaldcr.com">info@medicaldcr.com</a></p>
+                </div>
+                <div class="col-md-3 col-sm-3 whatsapp-box detail-box">
+                    <i><img src="images/ftr-phone.png" alt="WhatsApp"/></i>
+                    <h4>WhatsApp</h4>
+                    <p><a href="https://wa.me/50672408635" target="_blank" rel="noopener"><i class="fa fa-whatsapp"></i> (+506) 7240-8635</a></p>
+                    <p>Business Inquiries</p>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <aside class="widget widget-about">
+                <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
+                    <aside class="widget widget-about" style="text-align: center;">
                         <h3><span class="clnvx-logo clnvx-logo-ftr"><span class="clnvx-plus">+</span>Clenivax&trade;</span></h3>
                         <p>Leading innovation in surgical skin preparation. Trusted by healthcare professionals worldwide for over 21 years.</p>
                         <div class="time-schedule">
                             <p>Monday &ndash; Friday <span>8:00 &ndash; 18:00</span></p>
                             <p>Saturday <span>8:00 &ndash; 14:00</span></p>
                             <p>Sunday <span>Closed</span></p>
-                        </div>
-                    </aside>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <aside class="widget widget-links">
-                        <h3 class="widget-title">Products &amp; Resources</h3>
-                        <ul>
-                            <li><a href="#">CHG Applicators</a></li>
-                            <li><a href="#">MSA-260 26mL</a></li>
-                            <li><a href="#">MSA-105 10.5mL</a></li>
-                            <li><a href="#">MSA-50 5mL/3mL</a></li>
-                            <li><a href="#">MSA-50S 3mL</a></li>
-                            <li><a href="#">Clinical Studies</a></li>
-                            <li><a href="#">Training Videos</a></li>
-                            <li><a href="#">MSDS Documents</a></li>
-                        </ul>
-                    </aside>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <aside class="widget widget-newsletter">
-                        <h3 class="widget-title">Stay Informed</h3>
-                        <p>Subscribe for clinical updates, new product launches, and healthcare guidelines.</p>
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Email Address">
-                            <span class="input-group-btn">
-                                <button class="btn btn-default" type="button"><i class="fa fa-send-o"></i></button>
-                            </span>
-                        </div>
-                        <div class="social">
-                            <h6>Stay Connected</h6>
-                            <ul>
-                                <li><a href="#" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#" title="YouTube"><i class="fa fa-youtube-play"></i></a></li>
-                            </ul>
                         </div>
                     </aside>
                 </div>
@@ -1748,6 +1749,11 @@
 
 </div>
 
+<!-- FLOATING WHATSAPP BUTTON -->
+<a href="https://wa.me/50672408635" class="whatsapp-float" target="_blank" rel="noopener" title="Contact us on WhatsApp">
+    <i class="fa fa-whatsapp"></i>
+</a>
+
 <script src="js/jquery.min.js"></script>
 <script src="libraries/modernizr/modernizr.js"></script>
 <script src="libraries/bootstrap/bootstrap.min.js"></script>
@@ -1756,6 +1762,34 @@
 <script src="libraries/owl-carousel/owl.carousel.min.js"></script>
 <script src="libraries/number/jquery.animateNumber.min.js"></script>
 <script src="js/functions.js"></script>
+<script>
+// Sticky navbar scroll effect
+window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.ow-navigation');
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+
+// Product enquiry function
+function productEnquiry(productName) {
+    const message = `Hello, I would like to request information about: ${productName}`;
+    const emailSubject = encodeURIComponent(`Product Enquiry: ${productName}`);
+    const emailBody = encodeURIComponent(`Hello,\n\nI would like to request more information about the following product:\n\nProduct: ${productName}\n\nPlease send me details about:\n- Pricing\n- Availability\n- Technical specifications\n- Ordering process\n\nThank you.`);
+    const whatsappMessage = encodeURIComponent(`*Product Enquiry*\n\nProduct: ${productName}\n\nI would like to request more information about this product.`);
+    
+    // Show options
+    if (confirm('Choose contact method:\n\nOK = WhatsApp\nCancel = Email')) {
+        // WhatsApp
+        window.open(`https://wa.me/50672408635?text=${whatsappMessage}`, '_blank');
+    } else {
+        // Email
+        window.location.href = `mailto:info@clenivax.com?subject=${emailSubject}&body=${emailBody}`;
+    }
+}
+</script>
 <script>
 (function () {
     /* Script is at bottom of <body> — DOM is already ready, no $(document).ready needed */
@@ -1797,9 +1831,19 @@
         if (visible) {
             sub.style.display = 'none';
             link.setAttribute('aria-expanded', 'false');
+            var icon = link.querySelector('.fa');
+            if (icon) {
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-right');
+            }
         } else {
             sub.style.display = 'block';
             link.setAttribute('aria-expanded', 'true');
+            var icon = link.querySelector('.fa');
+            if (icon) {
+                icon.classList.remove('fa-chevron-right');
+                icon.classList.add('fa-chevron-down');
+            }
         }
     }
 

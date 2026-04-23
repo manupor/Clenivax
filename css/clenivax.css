@@ -86,6 +86,17 @@
 }
 .middle-header .logo-block a { text-decoration: none; }
 
+/* Hero banner text - white on dark background */
+.home-banner .clnvx-logo {
+    color: #fff !important;
+}
+
+/* Footer text - white */
+.footer-main .clnvx-logo,
+.footer-main .clnvx-logo-ftr {
+    color: #fff !important;
+}
+
 /* ════════════════════════════════════════════════
    TOP HEADER (dark navy bg)
    ════════════════════════════════════════════════ */
@@ -114,6 +125,29 @@
 .ow-navigation {
     background-color: #0a1f44 !important;
     border-color: #0a1f44 !important;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+.ow-navigation.scrolled {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+.ow-navigation .navbar-brand {
+    padding: 15px;
+    height: auto;
+    display: inline-block;
+}
+.ow-navigation .navbar-brand .clnvx-logo {
+    color: #fff !important;
+    font-size: 24px;
+}
+.ow-navigation .navbar-brand .clnvx-plus {
+    color: #2563eb !important;
+}
+.ow-navigation .navbar-brand:hover .clnvx-logo {
+    color: #e0eaff !important;
 }
 .ow-navigation .navbar-nav > li > a { color: #e0eaff !important; }
 .ow-navigation .navbar-nav > .active > a,
@@ -142,10 +176,31 @@
 .service-section { background-color: #fff; }
 .service-section .section-header h3 { color: #0a1f44 !important; }
 .service-section .section-header p  { color: #333 !important; }
-.service-block-content h3 { color: #0a1f44 !important; }
+.service-block-content h3 { 
+    color: #0a1f44 !important; 
+}
+.service-block-content h3::before,
+.service-block-content h3::after {
+    display: none !important;
+}
 .service-block-content p  { color: #444 !important; }
-.service-block-icon { background-color: #0a1f44 !important; }
-.service-block:hover .service-block-icon { background-color: #2563eb !important; }
+.service-block-icon { 
+    display: inline-block;
+    margin-right: 15px;
+    vertical-align: top;
+}
+.service-block-icon i {
+    font-size: 48px;
+    color: #0a1f44;
+}
+.service-block {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+.service-block-content {
+    flex: 1;
+}
 
 /* Section header underlines */
 .section-header h3:before,
@@ -221,9 +276,32 @@
 .we-are-best { background-color: #f4f7fc !important; }
 .we-are-best .section-header h3 { color: #0a1f44 !important; }
 .we-are-best .section-header p  { color: #333 !important; }
-.we-are-best-block { border-left: 3px solid #2563eb !important; }
-.we-are-best-icon  { background-color: #2563eb !important; }
-.we-are-best-content h3 { color: #0a1f44 !important; }
+.we-are-best-block { 
+    border-left: 3px solid #2563eb !important; 
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px 0;
+}
+.we-are-best-icon  { 
+    display: inline-block;
+    min-width: 60px;
+}
+.we-are-best-icon i {
+    font-size: 48px;
+    color: #2563eb;
+}
+.we-are-best-content {
+    flex: 1;
+}
+.we-are-best-content h3 { 
+    color: #0a1f44 !important; 
+    margin-top: 0;
+}
+.we-are-best-content h3::before,
+.we-are-best-content h3::after {
+    display: none !important;
+}
 .we-are-best-content p  { color: #444 !important; }
 
 /* Accordion / departments */
@@ -295,6 +373,301 @@
 .bottom-footer { background-color: #071630 !important; }
 .bottom-footer p, .bottom-footer a { color: #6b8ab8 !important; }
 .bottom-footer a:hover { color: #fff !important; }
+
+/* ════════════════════════════════════════════════
+   FLOATING WHATSAPP BUTTON
+   ════════════════════════════════════════════════ */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    z-index: 9998;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+.whatsapp-float:hover {
+    background: linear-gradient(135deg, #128C7E 0%, #075E54 100%);
+    transform: scale(1.1);
+    box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+    color: #fff;
+}
+.whatsapp-float i {
+    line-height: 1;
+}
+
+/* Pulse animation */
+@keyframes whatsapp-pulse {
+    0% {
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    }
+    50% {
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4), 0 0 0 10px rgba(37, 211, 102, 0.1);
+    }
+    100% {
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    }
+}
+.whatsapp-float {
+    animation: whatsapp-pulse 2s infinite;
+}
+
+/* Mobile responsive */
+@media (max-width: 767px) {
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        font-size: 26px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+/* ════════════════════════════════════════════════
+   CATALOG DOWNLOAD SECTION
+   ════════════════════════════════════════════════ */
+.catalog-download-section {
+    background: linear-gradient(135deg, #f4f7fc 0%, #e8f0fc 100%);
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+.catalog-download-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(37,99,235,0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+.catalog-download-inner {
+    position: relative;
+    z-index: 1;
+}
+
+/* Left column - text content */
+.catalog-text-col {
+    padding-right: 40px;
+}
+.catalog-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #2563eb 0%, #1e5fa8 100%);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+.catalog-text-col h2 {
+    font-size: 36px;
+    color: #0a1f44;
+    font-weight: 800;
+    margin: 0 0 20px;
+    line-height: 1.2;
+}
+.catalog-text-col h2 span {
+    color: #2563eb;
+    position: relative;
+}
+.catalog-text-col > p {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+/* Meta list with icons */
+.catalog-meta-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px;
+}
+.catalog-meta-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    font-size: 15px;
+    color: #333;
+    border-bottom: 1px solid rgba(10,31,68,0.08);
+}
+.catalog-meta-list li:last-child {
+    border-bottom: none;
+}
+.catalog-meta-list li i {
+    color: #2563eb;
+    font-size: 18px;
+    width: 24px;
+    text-align: center;
+}
+
+/* Action buttons */
+.btn-catalog-download,
+.btn-catalog-view {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-right: 12px;
+    margin-bottom: 10px;
+}
+.btn-catalog-download {
+    background: linear-gradient(135deg, #2563eb 0%, #1e5fa8 100%);
+    color: #fff;
+    box-shadow: 0 4px 14px rgba(37,99,235,0.3);
+}
+.btn-catalog-download:hover {
+    background: linear-gradient(135deg, #0a1f44 0%, #142d6e 100%);
+    box-shadow: 0 6px 20px rgba(10,31,68,0.4);
+    transform: translateY(-2px);
+    color: #fff;
+}
+.btn-catalog-view {
+    background: #fff;
+    color: #2563eb;
+    border: 2px solid #2563eb;
+}
+.btn-catalog-view:hover {
+    background: #2563eb;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* Right column - PDF card visual */
+.catalog-visual-col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 40px;
+}
+.catalog-pdf-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(10,31,68,0.12);
+    position: relative;
+    transition: all 0.3s ease;
+    max-width: 280px;
+    width: 100%;
+}
+.catalog-pdf-card::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    background: linear-gradient(135deg, #2563eb, #1e5fa8);
+    border-radius: 12px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.catalog-pdf-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px rgba(10,31,68,0.2);
+}
+.catalog-pdf-card:hover::before {
+    opacity: 1;
+}
+
+.catalog-pdf-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    background: linear-gradient(135deg, #2563eb 0%, #1e5fa8 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+.catalog-pdf-card:hover .catalog-pdf-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+.catalog-pdf-icon i {
+    font-size: 36px;
+    color: #fff;
+}
+.catalog-pdf-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0a1f44;
+    margin: 0 0 8px;
+    line-height: 1.3;
+}
+.catalog-pdf-size {
+    display: block;
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 20px;
+}
+.catalog-pdf-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: #f4f7fc;
+    color: #2563eb;
+    border-radius: 50%;
+    font-size: 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.catalog-pdf-btn:hover {
+    background: #2563eb;
+    color: #fff;
+    transform: scale(1.15);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .catalog-text-col,
+    .catalog-visual-col {
+        width: 100% !important;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .catalog-visual-col {
+        margin-top: 40px;
+    }
+}
+@media (max-width: 767px) {
+    .catalog-download-section {
+        padding: 50px 0;
+    }
+    .catalog-text-col h2 {
+        font-size: 28px;
+    }
+    .btn-catalog-download,
+    .btn-catalog-view {
+        width: 100%;
+        justify-content: center;
+        margin-right: 0;
+    }
+}
 
 /* ════════════════════════════════════════════════
    DETAIL MODAL SYSTEM
@@ -539,6 +912,10 @@
     .top-header .col-md-6 { width: 100%; text-align: center !important; }
     .top-header ul { justify-content: center; display: flex; flex-wrap: wrap; padding: 0; margin: 0 0 8px; }
     .top-header ul li { display: inline-block; }
+
+    /* --- Navbar brand */
+    .ow-navigation .navbar-brand { padding: 10px 15px; }
+    .ow-navigation .navbar-brand .clnvx-logo { font-size: 20px; }
 
     /* --- Middle header */
     .middle-header { padding: 15px 0; }
@@ -1779,16 +2156,19 @@
     width: 100%;
     background: #0a1f44;
     color: #fff;
-    padding: 10px 16px;
-    font-size: 12px;
+    text-align: center;
+    padding: 12px 20px;
+    font-size: 13px;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.6px;
-    border-radius: 5px;
+    letter-spacing: 0.5px;
+    border-radius: 4px;
     text-decoration: none;
-    transition: background 0.25s ease;
-    text-align: center;
+    transition: all 0.3s ease;
     margin-top: auto;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
 }
