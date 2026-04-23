@@ -32,8 +32,7 @@
     object-fit: cover;
     z-index: 0;
 }
-.home-banner .container,
-.home-banner .banner-shape {
+.home-banner .container {
     position: relative;
     z-index: 2;
 }
@@ -56,11 +55,6 @@
     background-color: #0a1f44 !important;
     border-color: #0a1f44 !important;
 }
-/* Banner shapes — navy tones */
-.home-banner .left-shape       { background-color: #2563eb; }
-.home-banner .left-shape-blue  { background-color: #0a1f44; }
-.home-banner .right-shape      { background-color: #f4f7fc; }
-.home-banner .right-shape-blue { background-color: #142d6e; }
 
 /* ════════════════════════════════════════════════
    LOGO
@@ -355,7 +349,9 @@
 /* Widget titles and text */
 .footer-main .widget-title { color: #fff !important; }
 .footer-main .widget-title:before { background-color: #2563eb !important; }
+.footer-main .widget-about { text-align: center; }
 .footer-main .widget-about p { color: #a8c0e8 !important; }
+.footer-main .widget-about .time-schedule { text-align: left; }
 .footer-main .widget-about .time-schedule p { color: #a8c0e8 !important; }
 .footer-main .widget-about .time-schedule span { color: #fff !important; }
 .footer-main .widget-links ul li a { color: #a8c0e8 !important; }
@@ -1041,51 +1037,197 @@
 }
 
 /* ════════════════════════════════════════════════
-   HERO — shorter, full-width, centered text
+   SCROLL EXPAND HERO
    ════════════════════════════════════════════════ */
-.home-banner {
-    padding-top: 0 !important;
-    display: flex !important;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 480px;
+.seh-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
 }
-.home-banner > .container {
-    flex: 1;
+.seh-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: linear-gradient(135deg, #0a1f44 0%, #142d6e 55%, #1e5fa8 100%);
+}
+.seh-bg canvas {
+    position: absolute;
+    inset: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+.seh-stage {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.seh-media-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 400px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 60px rgba(0,0,0,0.45);
+    z-index: 1;
+}
+.seh-inner-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.seh-media-dim {
+    position: absolute;
+    inset: 0;
+    background: rgba(10,31,68,0.45);
+    pointer-events: none;
+}
+.seh-title-row {
+    position: relative;
+    z-index: 10;
     display: flex;
     align-items: center;
-    padding-top: 200px;
-    padding-bottom: 0px;
-}
-.home-banner .carousel,
-.home-banner .carousel-inner,
-.home-banner .item {
+    justify-content: center;
+    gap: 20px;
     width: 100%;
+    pointer-events: none;
 }
-.home-banner .item {
-    display: flex !important;
-    justify-content: center;
+.seh-word-left,
+.seh-word-right {
+    font-family: 'Raleway', sans-serif;
+    font-size: clamp(1.8rem, 4vw, 3.2rem);
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    display: inline-block;
+    white-space: nowrap;
+    text-shadow: 0 2px 24px rgba(0,0,0,0.6);
 }
-.home-banner .item > .col-md-12 {
-    float: none !important;
+.seh-hint {
+    position: absolute;
+    bottom: 36px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 10;
+    pointer-events: none;
+    color: rgba(255,255,255,0.75);
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
 }
-/* Override shortcodes.css hardcoded values on .banner-left */
-.banner-left,
-.banner-fullwidth {
+.seh-hint p {
+    margin: 0;
+    font-size: 12px;
+    color: rgba(255,255,255,0.45);
+    letter-spacing: 2px;
+}
+.seh-hint .fa {
+    font-size: 16px;
+    animation: sehBounce 1.4s ease-in-out infinite;
+}
+@keyframes sehBounce {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(7px); }
+}
+.seh-full-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    background: linear-gradient(135deg, rgba(10,31,68,0.88) 0%, rgba(20,45,110,0.78) 55%, rgba(30,95,168,0.60) 100%);
+    opacity: 0;
+    pointer-events: none;
+}
+.seh-cta {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.7s ease;
+    padding-top: 70px;
+}
+.seh-cta.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+/* banner-left inside CTA */
+.seh-cta .banner-left,
+.seh-cta .banner-fullwidth {
     display: block !important;
     padding-top: 0 !important;
     padding-bottom: 0 !important;
     position: static !important;
     width: 100%;
-    max-width: 700px;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    text-align: center;
+    max-width: 680px;
+    text-align: left;
 }
-.banner-left::before {
-    display: none !important;
+.seh-cta .banner-left::before { display: none !important; }
+
+/* ── SEH Mobile ─────────────────────────────── */
+@media (max-width: 767px) {
+    .seh-section {
+        height: 70vh !important;
+    }
+    .seh-stage {
+        height: 70vh !important;
+    }
+    .seh-media-box {
+        width: 220px !important;
+        height: 300px !important;
+    }
+    .seh-title-row {
+        flex-direction: column;
+        gap: 4px;
+    }
+    .seh-word-left,
+    .seh-word-right {
+        font-size: clamp(1.3rem, 7vw, 1.8rem);
+        letter-spacing: 2px;
+    }
+    .seh-hint {
+        bottom: 24px;
+        font-size: 10px;
+    }
+    .seh-cta {
+        padding-top: 55px;
+    }
+    .seh-cta .container {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    .seh-cta .banner-left h3 {
+        font-size: 22px !important;
+    }
+    .seh-cta .banner-left p {
+        font-size: 14px !important;
+        line-height: 1.6 !important;
+    }
+    .seh-cta .banner-left a {
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+        max-width: 220px;
+    }
 }
 
 /* ════════════════════════════════════════════════

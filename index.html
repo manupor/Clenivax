@@ -66,36 +66,49 @@
         </nav>
     </header>
 
-    <!-- HERO BANNER -->
-    <div id="home-banner" class="container-fluid no-padding banner-section home-banner">
-        <video class="hero-video" autoplay muted loop playsinline>
-            <source src="images/CLENIVAX.mov" type="video/mp4">
-        </video>
-        <div class="container">
-            <div id="main-carousel" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner" role="listbox">
-                    <div class="item active">
-                        <div class="col-md-12 no-padding">
-                            <div class="banner-left banner-fullwidth">
-                                <span>Advanced Surgical Skin Preparation</span>
-                                <h3>We Protect Your Surgical Field</h3>
-                                <p>Clenivax&trade; delivers powerful, persistent antimicrobial protection backed by 60+ clinical studies and trusted by providers for over 21 years.</p>
-                                <a href="products.html">Explore Products <i class="fa fa-arrow-right"></i></a>
-                            </div>
-                        </div>
+    <!-- SCROLL EXPAND HERO -->
+    <div id="home-banner" class="seh-section">
+        <!-- Particles background -->
+        <div id="particles-js" class="seh-bg"></div>
+
+        <!-- Full-viewport stage -->
+        <div class="seh-stage">
+
+            <!-- Expanding video card -->
+            <div class="seh-media-box" id="sehMediaBox">
+                <video class="seh-inner-video" autoplay muted loop playsinline>
+                    <source src="images/CLENIVAX.mov" type="video/mp4">
+                </video>
+                <div class="seh-media-dim" id="sehMediaDim"></div>
+            </div>
+
+            <!-- Split title — appears on top of card, spreads apart as video expands -->
+            <div class="seh-title-row">
+                <h3 class="seh-word-left" id="sehWordLeft">We Protect</h3>
+                <h3 class="seh-word-right" id="sehWordRight">Your Surgical Field</h3>
+            </div>
+
+            <!-- Scroll hint -->
+            <div class="seh-hint" id="sehHint">
+                <p>Advanced Surgical Skin Preparation</p>
+                <i class="fa fa-chevron-down"></i>
+            </div>
+
+            <!-- Gradient overlay that fades back in at full expansion -->
+            <div class="seh-full-overlay" id="sehFullOverlay"></div>
+
+            <!-- CTA fades in after full expansion -->
+            <div class="seh-cta" id="sehCta">
+                <div class="container">
+                    <div class="banner-left banner-fullwidth" style="text-align:center; margin:0 auto;">
+                        <span>Advanced Surgical Skin Preparation</span>
+                        <h3>We Protect Your Surgical Field</h3>
+                        <p>Clenivax&trade; delivers powerful, persistent antimicrobial protection backed by 60+ clinical studies and trusted by providers for over 21 years.</p>
+                        <a href="products.html">Explore Products <i class="fa fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="banner-shape container-fluid no-padding">
-            <div class="col-md-6 col-sm-6 col-xs-6 shape-left no-padding">
-                <div class="left-shape-blue"><svg width="100%" height="100%"><clipPath id="clipPolygon2" clipPathUnits="objectBoundingBox"><polygon points="0 0, 0 100, 120 100, 0 0"></polygon></clipPath></svg></div>
-                <div class="left-shape"><svg width="100%" height="100%"><clipPath id="clipPolygon1" clipPathUnits="objectBoundingBox"><polygon points="0 0, 0 100, 100 100, 0 0"></polygon></clipPath></svg></div>
-            </div>
-            <div class="col-md-6 col-sm-6 col-xs-6 shape-right no-padding">
-                <div class="right-shape-blue"><svg width="100%" height="100%"><clipPath id="clipPolygon3" clipPathUnits="objectBoundingBox"><polygon points="1 0.2, 0 1, 0 0.835, 1 0"></polygon></clipPath></svg></div>
-                <div class="right-shape"><svg width="100%" height="100%"><clipPath id="clipPolygon4" clipPathUnits="objectBoundingBox"><polygon points="1 0, 0 1, 100 100, 100 0"></polygon></clipPath></svg></div>
-            </div>
+
         </div>
     </div>
 
@@ -389,42 +402,6 @@
         </div>
     </div>
 
-    <!-- CATALOG DOWNLOAD -->
-    <div class="container-fluid no-padding catalog-download-section">
-        <div class="container">
-            <div class="row catalog-download-inner">
-                <div class="col-md-7 col-sm-7 catalog-text-col">
-                    <span class="catalog-badge">ATRAMAT &middot; Official Export Catalog</span>
-                    <h2>Download Our <span>Product Catalog</span></h2>
-                    <p>Access the complete ATRAMAT export catalog &mdash; full product range, technical specifications, packaging details, and ordering information in a single document.</p>
-                    <ul class="catalog-meta-list">
-                        <li><i class="fa fa-file-pdf-o"></i> PDF Format</li>
-                        <li><i class="fa fa-globe"></i> Export Edition &middot; May 2022</li>
-                        <li><i class="fa fa-download"></i> Free Download</li>
-                    </ul>
-                    <a href="docs/ATRAMAT-Catalogo-Exportacion-may22.pdf" download class="btn-catalog-download">
-                        <i class="fa fa-download"></i> Download Catalog
-                    </a>
-                    <a href="docs/ATRAMAT-Catalogo-Exportacion-may22.pdf" target="_blank" class="btn-catalog-view">
-                        <i class="fa fa-eye"></i> View Online
-                    </a>
-                </div>
-                <div class="col-md-5 col-sm-5 catalog-visual-col">
-                    <div class="catalog-pdf-card">
-                        <div class="catalog-pdf-icon">
-                            <i class="fa fa-file-pdf-o"></i>
-                        </div>
-                        <p class="catalog-pdf-name">ATRAMAT Catálogo<br>Exportación</p>
-                        <span class="catalog-pdf-size">PDF &middot; May 2022</span>
-                        <a href="docs/ATRAMAT-Catalogo-Exportacion-may22.pdf" download class="catalog-pdf-btn">
-                            <i class="fa fa-download"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- FOOTER -->
     <footer class="footer-main container-fluid no-padding">
         <div class="container">
@@ -456,7 +433,7 @@
             </div>
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
-                    <aside class="widget widget-about" style="text-align: center;">
+                    <aside class="widget widget-about">
                         <h3><span class="clnvx-logo clnvx-logo-ftr"><span class="clnvx-plus">+</span>Clenivax&trade;</span></h3>
                         <p>Leading innovation in surgical skin preparation. Trusted by healthcare professionals worldwide for over 21 years.</p>
                         <div class="time-schedule">
@@ -635,6 +612,7 @@
 <script src="libraries/number/jquery.animateNumber.min.js"></script>
 <script src="js/script.js"></script>
 <script src="js/functions.js"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
 <script>
 function sendToWhatsApp(event) {
@@ -679,6 +657,142 @@ window.addEventListener('scroll', function() {
         navbar.classList.remove('scrolled');
     }
 });
+
+// ── Particles background ────────────────────────
+(function initParticles() {
+    if (typeof particlesJS === 'undefined') {
+        setTimeout(initParticles, 100);
+        return;
+    }
+    particlesJS('particles-js', {
+        particles: {
+            number: { value: window.innerWidth < 768 ? 50 : 120, density: { enable: true, value_area: 800 } },
+            color: { value: '#5ba4f5' },
+            shape: { type: 'circle', stroke: { width: 0.5, color: '#2563eb' } },
+            opacity: {
+                value: 0.6, random: true,
+                anim: { enable: true, speed: 1, opacity_min: 0.2 }
+            },
+            size: {
+                value: 3, random: true,
+                anim: { enable: true, speed: 2, size_min: 1 }
+            },
+            line_linked: {
+                enable: true, distance: 150,
+                color: '#4080d0', opacity: 0.35, width: 1
+            },
+            move: { enable: true, speed: 1.5, random: true, out_mode: 'bounce' }
+        },
+        interactivity: {
+            detect_on: 'canvas',
+            events: {
+                onhover: { enable: true, mode: 'grab' },
+                onclick:  { enable: true, mode: 'push' },
+                resize: true
+            },
+            modes: {
+                grab: { distance: 200, line_linked: { opacity: 0.7 } },
+                push: { particles_nb: 3 }
+            }
+        },
+        retina_detect: true
+    });
+}());
+
+// ── Scroll Expand Hero ──────────────────────────
+(function () {
+    var progress     = 0;
+    var expanded     = false;
+    var touchStartY  = 0;
+    var isMobile     = window.innerWidth < 768;
+
+    var box     = document.getElementById('sehMediaBox');
+    var dim     = document.getElementById('sehMediaDim');
+    var left    = document.getElementById('sehWordLeft');
+    var right   = document.getElementById('sehWordRight');
+    var hint    = document.getElementById('sehHint');
+    var cta     = document.getElementById('sehCta');
+    var bg      = document.querySelector('.seh-bg');
+    var overlay = document.getElementById('sehFullOverlay');
+
+    if (!box) return;
+
+    function render() {
+        var p     = progress;
+        var baseW = isMobile ? 220 : 300;
+        var baseH = isMobile ? 300 : 400;
+        var maxH = isMobile ? window.innerHeight * 0.7 : window.innerHeight;
+        var w    = Math.min(baseW + p * (isMobile ? window.innerWidth  : 1250), window.innerWidth);
+        var h    = Math.min(baseH + p * (isMobile ? maxH               : 420),  maxH);
+        var tx   = p * (isMobile ? 180 : 150);
+        var rad  = 16 * (1 - p);
+
+        box.style.width        = w + 'px';
+        box.style.height       = h + 'px';
+        box.style.borderRadius = rad + 'px';
+
+        if (dim)     dim.style.opacity     = Math.max(0, 0.45 - p * 0.45);
+        if (bg)      bg.style.opacity      = Math.max(0, 1 - p * 1.8);
+        if (overlay) overlay.style.opacity = Math.max(0, (p - 0.65) / 0.35);
+
+        left.style.transform  = 'translateX(-' + tx + 'vw)';
+        right.style.transform = 'translateX('  + tx + 'vw)';
+
+        if (hint) hint.style.opacity = Math.max(0, 1 - p * 4);
+
+        if (p >= 1) {
+            if (cta) cta.classList.add('visible');
+        } else {
+            if (p < 0.75 && cta) cta.classList.remove('visible');
+        }
+    }
+
+    window.addEventListener('wheel', function (e) {
+        if (expanded) {
+            if (e.deltaY < 0 && window.scrollY <= 5) {
+                expanded = false;
+                e.preventDefault();
+            }
+            return;
+        }
+        e.preventDefault();
+        progress = Math.min(Math.max(progress + e.deltaY * 0.0009, 0), 1);
+        if (progress >= 1) expanded = true;
+        render();
+    }, { passive: false });
+
+    window.addEventListener('scroll', function () {
+        if (!expanded) window.scrollTo(0, 0);
+    });
+
+    window.addEventListener('touchstart', function (e) {
+        touchStartY = e.touches[0].clientY;
+    }, { passive: true });
+
+    window.addEventListener('touchmove', function (e) {
+        if (!touchStartY) return;
+        var dy = touchStartY - e.touches[0].clientY;
+        if (expanded) {
+            if (dy < -20 && window.scrollY <= 5) { expanded = false; e.preventDefault(); }
+            return;
+        }
+        e.preventDefault();
+        var factor = dy < 0 ? 0.008 : 0.005;
+        progress = Math.min(Math.max(progress + dy * factor, 0), 1);
+        if (progress >= 1) expanded = true;
+        render();
+        touchStartY = e.touches[0].clientY;
+    }, { passive: false });
+
+    window.addEventListener('touchend', function () { touchStartY = 0; });
+
+    window.addEventListener('resize', function () {
+        isMobile = window.innerWidth < 768;
+        render();
+    });
+
+    render();
+}());
 </script>
 
 </body>

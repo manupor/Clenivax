@@ -365,46 +365,6 @@
 	line-height: 70px;
 	display: inline-block;
 }
-.service-block-icon::after,
-.service-block-icon::before {
-	content: "";
-	position: absolute;
-	border: 1px solid #eff1f2;
-	border-radius:5px;
-	z-index: 0;
-}
-.service-block-icon::after {
-	top: 18px;
-	left: 0;
-	width: 100%;
-	height: 35px;
-}
-.service-block-icon::before {
-	left: 18px;
-	height: 100%;
-	width: 35px;
-	height: 70px;
-}
-.service-block:hover .service-block-icon::after,
-.service-block:hover .service-block-icon::before {
-	background-color: #33a9ee;
-	border-color:#33a9ee;
-}
-.service-block:hover .service-block-icon i {
-	display: none;
-}
-.service-block:hover .service-block-icon i:nth-child(2) {
-	display: block;
-	background-color: #33a9ee;
-	width: 36px;
-	height: 36px;
-	position: relative;
-	display: inline-block;
-	z-index: 1;
-	padding: 5px 0;
-	top: 13px;
-	border-radius: 4px;
-}
 .service-block-icon i {
 	background-color: #fff;
 	width: 37px;
