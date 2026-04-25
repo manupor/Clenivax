@@ -20,16 +20,6 @@
 .ow-navigation.navbar-fixed-top {
 	position: fixed;
 }
-.ow-navigation:before {
-	content: "";
-	background-color: #0f89d1;
-	position: absolute;
-	left: 50%;
-	right: 0;
-	top: 0;
-	bottom: 0;
-	display: inline-block;
-}
 
 .ow-navigation .navbar-collapse > .nav.navbar-nav > li {
 	margin: 0 18px;

@@ -148,11 +148,6 @@
                                 </ul>
                             </li>
                         </ul>
-                        <div class="sidebar-catalog-btn">
-                            <a href="docs/ATRAMAT-Catalogo-Exportacion-may22.pdf" download>
-                                <i class="fa fa-file-pdf-o"></i> Download Catalog
-                            </a>
-                        </div>
                     </div>
                 </div>
 
@@ -1655,42 +1650,8 @@
 
                     <!-- QBD PHARMA SECTION -->
                     <div id="cat-qbd" class="product-category-section" style="display:none">
-                        <div class="category-header">
-                            <h2>QBD PHARMA Products</h2>
-                            <p class="category-desc">Quality By Design pharmaceutical products. Explore our complete line of QBD PHARMA medical and pharmaceutical supplies. Visit <a href="https://www.qbdpharm.com/product" target="_blank" rel="noopener">www.qbdpharm.com/product</a> for the full catalog.</p>
-                        </div>
-                        <div class="products-grid-row row">
-                            <!-- Product 1 -->
-                            <div class="col-md-4 col-sm-6 product-card-item">
-                                <div class="product-card-wrap">
-                                    <div class="product-img-box">
-                                        <a href="https://www.qbdpharm.com/product" target="_blank" rel="noopener">
-                                            <img src="images/CHG-Applicators-.jpg" alt="QBD PHARMA Products" onerror="this.src='images/what-we-do-best-block-bg.jpg'">
-                                        </a>
-                                        <span class="badge-featured">New Partner</span>
-                                    </div>
-                                    <div class="product-info-box">
-                                        <h4 class="product-title">
-                                            <a href="https://www.qbdpharm.com/product" target="_blank" rel="noopener">QBD PHARMA Medical Products</a>
-                                        </h4>
-                                        <div class="product-attributes">
-                                            <span class="attr-label">Type:</span> Pharmaceutical & Medical
-                                        </div>
-                                        <div class="product-attributes">
-                                            <span class="attr-label">Quality:</span> QBD Certified
-                                        </div>
-                                        <div class="product-desc-short">
-                                            Quality By Design pharmaceutical products including medical supplies, laboratory equipment, and healthcare solutions. ISO certified manufacturing.
-                                        </div>
-                                        <div class="product-tags">
-                                            <span class="tag">Pharma</span>
-                                            <span class="tag">QBD</span>
-                                            <span class="tag">ISO</span>
-                                        </div>
-                                        <a href="https://www.qbdpharm.com/product" target="_blank" rel="noopener" class="btn-enquiry">View Catalog</a>
-                                    </div>
-                                </div>
-                            </div>
+                        <div id="qbd-products-grid" class="products-grid-row row">
+                            <!-- rendered by JS from data/products.json -->
                         </div>
                     </div>
 
@@ -1772,6 +1733,46 @@ window.addEventListener('scroll', function() {
         navbar.classList.remove('scrolled');
     }
 });
+
+// ── QBD Products renderer ───────────────────────
+(function () {
+    var grid = document.getElementById('qbd-products-grid');
+    if (!grid) return;
+
+    fetch('data/products.json')
+        .then(function (r) { return r.json(); })
+        .then(function (products) {
+            grid.innerHTML = products.map(function (p) {
+                var img = p.images && p.images.length
+                    ? p.images[0]
+                    : 'images/what-we-do-best-block-bg.jpg';
+                var title = p.title || p.slug;
+                var encodedTitle = title.replace(/'/g, "\\'");
+                return [
+                    '<div class="col-md-4 col-sm-6 product-card-item">',
+                    '  <div class="product-card-wrap">',
+                    '    <div class="product-img-box">',
+                    '      <a href="' + p.source_url + '" target="_blank" rel="noopener">',
+                    '        <img src="' + img + '" alt="' + title + '" onerror="this.src=\'images/what-we-do-best-block-bg.jpg\'">',
+                    '      </a>',
+                    '      <span class="badge-featured">QBD</span>',
+                    '    </div>',
+                    '    <div class="product-info-box">',
+                    '      <h4 class="product-title">',
+                    '        <a href="' + p.source_url + '" target="_blank" rel="noopener">' + title + '</a>',
+                    '      </h4>',
+                    '      <button onclick="productEnquiry(\'' + encodedTitle + '\')" class="btn-enquiry">Enquiry</button>',
+                    '    </div>',
+                    '  </div>',
+                    '</div>'
+                ].join('\n');
+            }).join('\n');
+        })
+        .catch(function (err) {
+            grid.innerHTML = '<p style="color:#666;padding:20px">Could not load products.</p>';
+            console.error('QBD products load error:', err);
+        });
+}());
 
 // Product enquiry function
 function productEnquiry(productName) {
